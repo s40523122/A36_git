@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SqlAccessMaicl;
-using iniRW;
+
 using System.Data.SqlClient;
 using System.Diagnostics;
 using ActUtlTypeLib;
+using RosSharp.MsgGen;
 
 namespace CNCAppPlatform
 { 
@@ -220,6 +220,16 @@ namespace CNCAppPlatform
         private void timer1_Tick(object sender, EventArgs e)
         {
             //machineState1.timer1.Enabled = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string inputDir = AppDomain.CurrentDomain.BaseDirectory + "common_msgs/";
+            string outputdir = AppDomain.CurrentDomain.BaseDirectory + "Messages";
+            Console.WriteLine("开始生成ROS Messages...\n");
+            GenerateHelper.GenerateMsgAndSrv(inputDir, outputdir);
+            Console.WriteLine("生成完成");
+            Console.ReadLine();
         }
     }
 

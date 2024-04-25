@@ -43,9 +43,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.sshConn2 = new CNCAppPlatform.Controls.sshConn();
-            this.sshConn1 = new CNCAppPlatform.Controls.sshConn1();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.rosConn1 = new CNCAppPlatform.Controls.RosRemoteConnectBtn();
+            this.sshConn1 = new CNCAppPlatform.Controls.sshConn1();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -124,9 +125,9 @@
             // 
             this.tag1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
             this.tag1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tag1.Location = new System.Drawing.Point(9, 35);
+            this.tag1.Location = new System.Drawing.Point(6, 35);
             this.tag1.Name = "tag1";
-            this.tag1.Size = new System.Drawing.Size(161, 147);
+            this.tag1.Size = new System.Drawing.Size(164, 147);
             this.tag1.TabIndex = 0;
             this.tag1.Text = "";
             // 
@@ -181,56 +182,28 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "roscore";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
-            this.button3.Location = new System.Drawing.Point(661, 18);
+            this.button3.Location = new System.Drawing.Point(667, 11);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(55, 56);
+            this.button3.Size = new System.Drawing.Size(55, 50);
             this.button3.TabIndex = 6;
             this.button3.Text = "dis";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(258, 104);
+            this.richTextBox1.Location = new System.Drawing.Point(614, 90);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(697, 208);
+            this.richTextBox1.Size = new System.Drawing.Size(376, 255);
             this.richTextBox1.TabIndex = 7;
             this.richTextBox1.Text = "";
-            // 
-            // sshConn2
-            // 
-            this.sshConn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
-            this.sshConn2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.sshConn2.Location = new System.Drawing.Point(681, 353);
-            this.sshConn2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.sshConn2.Name = "sshConn2";
-            this.sshConn2.Size = new System.Drawing.Size(217, 85);
-            this.sshConn2.TabIndex = 9;
-            // 
-            // sshConn1
-            // 
-            this.sshConn1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.sshConn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
-            this.sshConn1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
-            this.sshConn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sshConn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sshConn1.Location = new System.Drawing.Point(772, 18);
-            this.sshConn1.Name = "sshConn1";
-            this.sshConn1.Radius = 10;
-            this.sshConn1.Size = new System.Drawing.Size(193, 66);
-            this.sshConn1.TabIndex = 8;
-            this.sshConn1.Text = "roscore";
-            this.sshConn1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.sshConn1.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -242,14 +215,54 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(1013, 270);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(167, 75);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // rosConn1
+            // 
+            this.rosConn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
+            this.rosConn1.Content = "realsense";
+            this.rosConn1.ContentFont = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rosConn1.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rosConn1.Location = new System.Drawing.Point(681, 392);
+            this.rosConn1.Margin = new System.Windows.Forms.Padding(0);
+            this.rosConn1.Name = "rosConn1";
+            this.rosConn1.Radius = 10;
+            this.rosConn1.Size = new System.Drawing.Size(177, 60);
+            this.rosConn1.TabIndex = 9;
+            // 
+            // sshConn1
+            // 
+            this.sshConn1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.sshConn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
+            this.sshConn1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
+            this.sshConn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sshConn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sshConn1.Location = new System.Drawing.Point(771, 11);
+            this.sshConn1.Name = "sshConn1";
+            this.sshConn1.Radius = 10;
+            this.sshConn1.Size = new System.Drawing.Size(193, 50);
+            this.sshConn1.TabIndex = 8;
+            this.sshConn1.Text = "roscore";
+            this.sshConn1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.sshConn1.UseVisualStyleBackColor = false;
+            // 
             // Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(35)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(1333, 626);
+            this.ClientSize = new System.Drawing.Size(1284, 626);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.sshConn2);
+            this.Controls.Add(this.rosConn1);
             this.Controls.Add(this.sshConn1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button3);
@@ -292,7 +305,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private Controls.sshConn1 sshConn1;
-        private Controls.sshConn sshConn2;
+        private Controls.RosRemoteConnectBtn rosConn1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

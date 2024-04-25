@@ -51,6 +51,7 @@ namespace CNCAppPlatform
             this.btFold = new System.Windows.Forms.PictureBox();
             this.btPower = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.connStatusLabel = new System.Windows.Forms.Label();
@@ -63,6 +64,7 @@ namespace CNCAppPlatform
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFormControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btFold)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -363,11 +365,22 @@ namespace CNCAppPlatform
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(210, 131);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1090, 609);
             this.panel1.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(511, 123);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 58);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // timer1
             // 
@@ -434,6 +447,7 @@ namespace CNCAppPlatform
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFormControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btFold)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,6 +480,7 @@ namespace CNCAppPlatform
         private ART_plus.DoubleImg btnFormControl;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.Button button1;
     }
 }
 

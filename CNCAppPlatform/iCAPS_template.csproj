@@ -124,10 +124,6 @@
     <Reference Include="RosSharp, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ROS.Sharp.1.1.0\lib\net46\RosSharp.dll</HintPath>
     </Reference>
-    <Reference Include="SqlAccessMaicl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\SqlAccessMaicl\SqlAccessMaicl\bin\Debug\SqlAccessMaicl.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -180,11 +176,11 @@
     <Compile Include="Controls\PlcConnectionBox.Designer.cs">
       <DependentUpon>PlcConnectionBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\sshConn.cs">
+    <Compile Include="Controls\RosRemoteConnectBtn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\sshConn.Designer.cs">
-      <DependentUpon>sshConn.cs</DependentUpon>
+    <Compile Include="Controls\RosRemoteConnectBtn.Designer.cs">
+      <DependentUpon>RosRemoteConnectBtn.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\sshConn1.cs">
       <SubType>Component</SubType>
@@ -237,13 +233,14 @@
     <Compile Include="Forms\Control.Designer.cs">
       <DependentUpon>Control.cs</DependentUpon>
     </Compile>
-    <Compile Include="Services\LineNotify.cs" />
-    <Compile Include="Temp\datePicker.cs">
+    <Compile Include="MsgBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Temp\datePicker.designer.cs">
-      <DependentUpon>datePicker.cs</DependentUpon>
+    <Compile Include="MsgBox.designer.cs">
+      <DependentUpon>MsgBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\LineNotify.cs" />
+    <Compile Include="Services\RosSharp_Tool.cs" />
     <Compile Include="Controls\deviceInfoView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -255,12 +252,6 @@
     </Compile>
     <Compile Include="Forms\deviceOverview.Designer.cs">
       <DependentUpon>deviceOverview.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Temp\equipStateIndicator.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Temp\equipStateIndicator.Designer.cs">
-      <DependentUpon>equipStateIndicator.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\flowView.cs">
       <SubType>UserControl</SubType>
@@ -289,24 +280,6 @@
       <DependentUpon>LayoutView.cs</DependentUpon>
     </Compile>
     <Compile Include="LineNotify.cs" />
-    <Compile Include="Temp\machineInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Temp\machineInfo.designer.cs">
-      <DependentUpon>machineInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Temp\machineState.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Temp\machineState.Designer.cs">
-      <DependentUpon>machineState.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Temp\MsgBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Temp\MsgBox.designer.cs">
-      <DependentUpon>MsgBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\OrderInputFrame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,20 +312,14 @@
     <Compile Include="Controls\SpeedBar.Designer.cs">
       <DependentUpon>SpeedBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Temp\ToggleSwitch.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Temp\ToggleSwitch.Designer.cs">
-      <DependentUpon>ToggleSwitch.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AddItemButton.resx">
       <DependentUpon>AddItemButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\PlcConnectionBox.resx">
       <DependentUpon>PlcConnectionBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\sshConn.resx">
-      <DependentUpon>sshConn.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\RosRemoteConnectBtn.resx">
+      <DependentUpon>RosRemoteConnectBtn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Task\Agv.resx">
       <DependentUpon>Agv.cs</DependentUpon>
@@ -378,17 +345,11 @@
     <EmbeddedResource Include="Forms\Control.resx">
       <DependentUpon>Control.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Temp\datePicker.resx">
-      <DependentUpon>datePicker.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Controls\deviceInfoView.resx">
       <DependentUpon>deviceInfoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\deviceOverview.resx">
       <DependentUpon>deviceOverview.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Temp\equipStateIndicator.resx">
-      <DependentUpon>equipStateIndicator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\flowView.resx">
       <DependentUpon>flowView.cs</DependentUpon>
@@ -402,15 +363,6 @@
     <EmbeddedResource Include="Controls\LayoutView.resx">
       <DependentUpon>LayoutView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Temp\machineInfo.resx">
-      <DependentUpon>machineInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Temp\machineState.resx">
-      <DependentUpon>machineState.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Temp\MsgBox.resx">
-      <DependentUpon>MsgBox.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\OrderInputFrame.resx">
       <DependentUpon>OrderInputFrame.cs</DependentUpon>
     </EmbeddedResource>
@@ -422,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\PlcRW_Test.resx">
       <DependentUpon>PlcRW_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgBox.resx">
+      <DependentUpon>MsgBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

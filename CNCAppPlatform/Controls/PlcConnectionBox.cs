@@ -83,12 +83,12 @@ namespace CNCAppPlatform
 
             btnCpu3u.Click += BtnCpu_Click;
             btnCpu5u.Click += BtnCpu_Click;
-            btnConnEthernet.Click += BtnConn_Click;
-            btnConnRS232.Click += BtnConn_Click;
+            btnConnEthernet.Click += BtnConnMethod_Click;
+            btnConnRS232.Click += BtnConnMethod_Click;
 
         }
 
-        private void BtnConn_Click(object sender, EventArgs e)
+        private void BtnConnMethod_Click(object sender, EventArgs e)
         {
             if (btnEdit.Checked != true) return;
             foreach (CheckBox checkBox in btnConns)
@@ -120,14 +120,12 @@ namespace CNCAppPlatform
             int returncode;
             try
             {
-                Form1.axActUtlType.ActLogicalStationNumber = LogicalStationNumber;
-                returncode = Form1.axActUtlType.Open();
+                ActMLUtlType axActUtlType = new ActMLUtlType();
+                axActUtlType.ActLogicalStationNumber = LogicalStationNumber;
+                returncode = axActUtlType.Open();
                 if (returncode == 0)
                 {
-                    //MessageBox.Show("connect");
-                    labelLED1.IsLight = true;
-                    (ParentForm.ParentForm as Form1).ConnectStatus = $"連接狀態：已連接至 #{LogicalStationNumber}";
-
+                    MessageBox.Show("connect");
                 }
                 else MessageBox.Show("unconnect");
             }
