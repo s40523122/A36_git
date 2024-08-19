@@ -1,4 +1,4 @@
-﻿namespace CNCAppPlatform.Controls
+﻿namespace RosSharp_HMI.Controls
 {
     partial class RosRemoteConnectBtn
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RosRemoteConnectBtn));
-            this.checkBox1 = new CNCAppPlatform.Controls.RosRemoteConnectBtn.MyCheckBox();
+            this.checkBox1 = new RosSharp_HMI.Controls.RosRemoteConnectBtn.MyCheckBox();
             this.SuspendLayout();
             // 
             // checkBox1

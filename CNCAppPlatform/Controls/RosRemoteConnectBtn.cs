@@ -9,47 +9,63 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.IO;
+using System.Threading;
+using RosSharp;
+using Messages.topic_tools;
+using System.Collections;
+using RosSharp_HMI.Services;
 
-namespace CNCAppPlatform.Controls
+namespace RosSharp_HMI.Controls
 {
     public partial class RosRemoteConnectBtn : UserControl
     {
         [Description("控制項邊緣圓角的半徑。"), Category("自訂值")]
         public int Radius
         {
-            get { return radius; }
+            get { return _radius; }
             set
             {
-                radius = value;
-                //SetRegion(path => Region = new Region(path));
+                _radius = value;
+                InitializeRegion();
             }
         }
-        private int radius = 10;
+        private int _radius = 10;
 
 
-        [Description("與控制項關聯的文字。"), Category("自訂值")]
-        public string Content
+        [Description("欲執行的任務名稱。"), Category("自訂值")]
+        public string TaskText
         {
             get { return checkBox1.Text.TrimStart(); }
             set{ checkBox1.Text = "  " + value; }
         }
 
         [Description("用來顯示控制項文字的字型。"), Category("自訂值")]
-        public Font ContentFont
+        public Font CommandTextFont
         {
             get { return checkBox1.Font; }
             set { checkBox1.Font = value; }
         }
 
-        public string Command
-        {
-            get
-            {
-                return checkBox1.Checked ? Content : Content + "_cancle";
-            }
+
+        [Description("主體的背景顏色。"), Category("自訂值")]
+        public Color BodyColor 
+        { 
+            get { return checkBox1.BackColor; } 
+            set 
+            { 
+                checkBox1.BackColor = value;
+                checkBox1.FlatAppearance.CheckedBackColor = value;
+            } 
         }
 
-        Color BORDER_COLOR = Color.Gray;
+        [Description("啟動時邊緣的燈色。"), Category("自訂值")]
+        public Color ColorEnable { get;set; } = Color.FromArgb(37, 250, 51);
+
+        [Description("關閉時邊緣的燈色。"), Category("自訂值")]
+        public Color ColorDisable { get; set; } = Color.Gray;
+
+        [Description("選擇通訊模式"), Category("自訂值")]
+        public ConnectEnum ConnectMode { get;set; } = ConnectEnum.Topic;
 
         private Image LinkImage = null;
         private Image BrokenLinkImage = null;
@@ -57,35 +73,50 @@ namespace CNCAppPlatform.Controls
 
         public RosRemoteConnectBtn()
         {
-            //checkBox1.Image = checkBox1.LinkImage;
             InitializeComponent();
 
-            checkBox1.BackColorChanged += checkBox1_BackColorChanged;
-            checkBox1.CheckedChanged += CheckBox1_CheckedChanged;
-            SizeChanged += SshConn_SizeChanged;
-            checkBox1.Paint += CheckBox1_Paint;
+            checkBox1.Click += CheckBox1_Click;
+            SizeChanged += UserControl_SizeChanged;
         }
 
-        private void RosRemoteConnectBtn_Click(object sender, EventArgs e)
+        static void _Main(string[] args)
         {
-            MessageBox.Show(Command);
+            IDictionary remappings;
+            RemappingHelper.GetRemappings(out remappings);
+            Network.Init(remappings);
+            Master.Init(remappings);
+            ThisNode.Init("", remappings, (int)(InitOption.AnonymousName | InitOption.NoRousout));
+            Param.Init(remappings);
+            
+            //设置参数值
+            //Param.set(key, value);
+            //Param.del(key)
+            Console.ReadKey();
         }
 
-        private void CheckBox1_Paint(object sender, PaintEventArgs e)
+        private async void CheckBox1_Click(object sender, EventArgs e)
         {
-            SetRegion(path => e.Graphics.DrawPath(new Pen(BORDER_COLOR, 4), path), 2);
-        }
+            string task_name = checkBox1.Checked ? TaskText : TaskText + "_cancle";     // 當 checked 為 False 時，命令文字後綴加上 "_cancel"
+            
+            switch (ConnectMode)
+            {
+                case ConnectEnum.Topic:
+                    
+                    break;
+                
+                case ConnectEnum.Parameter:
+                    break;
 
-        private void checkBox1_BackColorChanged(object sender, EventArgs e)
-        {
-            checkBox1.FlatAppearance.CheckedBackColor = BackColor;
-        }
-
-        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox1.Image = checkBox1.Checked ? LinkImage : BrokenLinkImage;
-            BORDER_COLOR = checkBox1.Checked ? Color.FromArgb(37, 250, 51) : Color.Gray;
-            Refresh();
+                case ConnectEnum.Service:
+                    bool success = await RosSharp_Tool.execute_task_by_service(task_name);
+                    if (success)
+                    {
+                        checkBox1.Image = checkBox1.Checked ? LinkImage : BrokenLinkImage;
+                        BackColor = checkBox1.Checked ? ColorEnable : ColorDisable;
+                        Refresh();
+                    }
+                    break;
+            }
         }
 
         private Image ResizeImage(Image image, int sideLength)
@@ -98,26 +129,31 @@ namespace CNCAppPlatform.Controls
             return resizedImage;
         }
 
-        private void SshConn_SizeChanged(object sender, EventArgs e)
+        private void UserControl_SizeChanged(object sender, EventArgs e)
         {
-            SetRegion(path => Region = new Region(path));
-            LinkImage = ResizeImage(checkBox1.LinkImage, this.Height/2);
+            InitializeRegion();
+            LinkImage = ResizeImage(checkBox1.LinkImage, this.Height/2); 
             checkBox1.Image = BrokenLinkImage = ResizeImage(checkBox1.BrokenLinkImage, this.Height/2);
             Refresh();
+        }
+        private void InitializeRegion()
+        {
+            SetRegion(bodypath => Region = new Region(bodypath));
+            SetRegion(bodypath => checkBox1.Region = new Region(bodypath), 4);
         }
 
         private void SetRegion(Action<GraphicsPath> action, int padding = 0)
         {
             using (GraphicsPath path = new GraphicsPath())
             {
-                path.AddLine(radius + padding, padding, Width - radius * 2 - padding, padding); // 上邊緣
-                path.AddArc(Width - radius * 2 - padding, padding, radius * 2, radius * 2, 270, 90); // 右上角
-                path.AddLine(Width - padding, radius + padding, Width - padding, Height - radius * 2 - padding); // 右邊緣
-                path.AddArc(Width - radius * 2 - padding, Height - radius * 2 - padding, radius * 2, radius * 2, 0, 90); // 右下角
-                path.AddLine(Width - radius * 2 - padding, Height - padding, radius + padding, Height - padding); // 下邊緣
-                path.AddArc(padding, Height - radius * 2 - padding, radius * 2, radius * 2, 90, 90); // 左下角
-                path.AddLine(padding, Height - radius * 2 - padding, padding, radius + padding); // 左邊緣
-                path.AddArc(padding, padding, radius * 2, radius * 2, 180, 90); // 左上角
+                path.AddLine(_radius + padding, padding, Width - _radius * 2 - padding, padding); // 上邊緣
+                path.AddArc(Width - _radius * 2 - padding, padding, _radius * 2, _radius * 2, 270, 90); // 右上角
+                path.AddLine(Width - padding, _radius + padding, Width - padding, Height - _radius * 2 - padding); // 右邊緣
+                path.AddArc(Width - _radius * 2 - padding, Height - _radius * 2 - padding, _radius * 2, _radius * 2, 0, 90); // 右下角
+                path.AddLine(Width - _radius * 2 - padding, Height - padding, _radius + padding, Height - padding); // 下邊緣
+                path.AddArc(padding, Height - _radius * 2 - padding, _radius * 2, _radius * 2, 90, 90); // 左下角
+                path.AddLine(padding, Height - _radius * 2 - padding, padding, _radius + padding); // 左邊緣
+                path.AddArc(padding, padding, _radius * 2, _radius * 2, 180, 90); // 左上角
                 path.CloseFigure(); // 關閉圖形
                 action(path);
 
@@ -132,5 +168,15 @@ namespace CNCAppPlatform.Controls
             [Description("斷開鎖鏈圖片。"), Category("自訂值")]
             public Image BrokenLinkImage { get; set; } = null;
         }
+    }
+
+    /// <summary>
+    /// Enum ModeType
+    /// </summary>
+    public enum ConnectEnum
+    {
+        Topic,
+        Parameter,
+        Service
     }
 }

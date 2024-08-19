@@ -1,4 +1,4 @@
-﻿namespace CNCAppPlatform
+﻿namespace RosSharp_HMI
 {
     partial class PlcControl
     {
@@ -30,9 +30,9 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.plcRW_Test1 = new CNCAppPlatform.PlcRW_Test();
-            this.plcRW_Test2 = new CNCAppPlatform.PlcRW_Test();
-            this.addItemButton1 = new CNCAppPlatform.AddItemButton();
+            this.plcRW_Test1 = new RosSharp_HMI.PlcRW_Test();
+            this.plcRW_Test2 = new RosSharp_HMI.PlcRW_Test();
+            this.addItemButton1 = new RosSharp_HMI.AddItemButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 

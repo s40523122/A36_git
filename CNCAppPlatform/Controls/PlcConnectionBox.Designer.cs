@@ -1,4 +1,4 @@
-﻿namespace CNCAppPlatform
+﻿namespace RosSharp_HMI
 {
     partial class PlcConnectionBox
     {
@@ -44,7 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.title = new System.Windows.Forms.Label();
-            this.labelLED1 = new CNCAppPlatform.LabelLED();
+            this.labelLED1 = new RosSharp_HMI.LabelLED();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();

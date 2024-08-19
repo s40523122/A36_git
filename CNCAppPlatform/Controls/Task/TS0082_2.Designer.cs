@@ -1,4 +1,4 @@
-﻿namespace CNCAppPlatform
+﻿namespace RosSharp_HMI
 {
     partial class TS0082_2
     {
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.myPanel2 = new CNCAppPlatform.myPanel();
+            this.myPanel2 = new RosSharp_HMI.myPanel();
             this.orderID1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.myPanel1 = new CNCAppPlatform.myPanel();
+            this.myPanel1 = new RosSharp_HMI.myPanel();
             this.plateNo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();

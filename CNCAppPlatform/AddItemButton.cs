@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 
-namespace CNCAppPlatform
+namespace RosSharp_HMI
 {
     public partial class AddItemButton : UserControl
     {

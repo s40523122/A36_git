@@ -1,4 +1,4 @@
-﻿namespace CNCAppPlatform
+﻿namespace RosSharp_HMI
 {
     partial class AddItemButton
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 
-namespace CNCAppPlatform.Stone
+namespace RosSharp_HMI.Stone
 {
     class LineNotify
     {

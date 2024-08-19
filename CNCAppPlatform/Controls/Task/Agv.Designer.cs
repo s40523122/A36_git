@@ -1,4 +1,4 @@
-﻿namespace CNCAppPlatform
+﻿namespace RosSharp_HMI
 {
     partial class Agv
     {
@@ -30,26 +30,26 @@
         {
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.myPanel5 = new CNCAppPlatform.myPanel();
+            this.myPanel5 = new RosSharp_HMI.myPanel();
             this.orderID42 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.myPanel6 = new CNCAppPlatform.myPanel();
+            this.myPanel6 = new RosSharp_HMI.myPanel();
             this.orderID41 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.myPanel3 = new CNCAppPlatform.myPanel();
+            this.myPanel3 = new RosSharp_HMI.myPanel();
             this.orderID32 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.myPanel2 = new CNCAppPlatform.myPanel();
+            this.myPanel2 = new RosSharp_HMI.myPanel();
             this.orderID31 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.myPanel1 = new CNCAppPlatform.myPanel();
+            this.myPanel1 = new RosSharp_HMI.myPanel();
             this.orderID2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.myPanel4 = new CNCAppPlatform.myPanel();
+            this.myPanel4 = new RosSharp_HMI.myPanel();
             this.orderID1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel9.SuspendLayout();

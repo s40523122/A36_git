@@ -11,7 +11,7 @@ using System.Drawing.Drawing2D;
 using System.Net.Http.Headers;
 using System.Net.Http;
 
-namespace CNCAppPlatform
+namespace RosSharp_HMI
 {
     public partial class SpeedBar : Panel
     {

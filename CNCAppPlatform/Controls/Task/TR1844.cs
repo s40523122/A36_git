@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CNCAppPlatform
+namespace RosSharp_HMI
 {
     public partial class TR1844 : UserControl
     {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ActUtlTypeLib;
 
-namespace CNCAppPlatform
+namespace RosSharp_HMI
 {
     public partial class PlcConn : Form
     {

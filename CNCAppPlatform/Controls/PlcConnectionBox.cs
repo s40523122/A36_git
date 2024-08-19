@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ActUtlTypeLib;
 
-namespace CNCAppPlatform
+namespace RosSharp_HMI
 {
     public partial class PlcConnectionBox : UserControl
     {
@@ -70,7 +70,7 @@ namespace CNCAppPlatform
 
             try
             {
-                Form1.axActUtlType = new ActUtlType();
+                //Form1.axActUtlType = new ActUtlType();
 
                 connectBtn.Click += ConnectBtn_Click;
                 disconnBtn.Click += DisconnBtn_Click;

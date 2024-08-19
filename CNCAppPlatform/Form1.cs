@@ -7,30 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using System.Data.SqlClient;
 using System.Diagnostics;
-using ActUtlTypeLib;
-using RosSharp.MsgGen;
+using RosSharp_HMI.Services;
+//using ActUtlTypeLib;
+using ActUtlTypeLib.test;
 
-namespace CNCAppPlatform
-{ 
-   
+namespace RosSharp_HMI
+{
+
     public partial class Form1 : Form
     {
-        private const int SW_NORMAL = 1;
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+        //private const int CS_DropShadow = 0x00020000;
 
-        [System.Runtime.InteropServices.DllImport("User32.dll")]
-        private static extern bool SetForegroundWindow(IntPtr handle);
+        public static ActUtlType axActUtlType = new ActUtlType();       // PLC
+        public static string debug_path = Application.StartupPath;
 
-        private IntPtr handle;
-
-        private const int CS_DropShadow = 0x00020000;
-
-        public static ActUtlType axActUtlType = new ActUtlType();
-
+        /// <summary>
+        /// 連線狀態文字
+        /// </summary>
         public string ConnectStatus
         {
             get { return connStatusLabel.Text; }
@@ -40,36 +35,65 @@ namespace CNCAppPlatform
         public Form1()
         {
             InitializeComponent();
-            //sidePanel.Width = 150;
-            string path = Application.StartupPath;
+            
 
-            if (!Debugger.IsAttached) WindowState = FormWindowState.Maximized;
-
+            // 返回主頁
             btnHome.Click += btnHome_Click;
-            DateTime nowTime = DateTime.Now;
 
-            JinToolkit.Services.LineNotify.connectToken = "4cNqk5otAwItnPkpeNvJKNsRylhrsndmFfAIiztJ4QU";
-            JinToolkit.Services.LineNotify.intervalMin = 0.1;
+            // 設定 Line Notify
+            //JinToolkit.Services.LineNotify.connectToken = "4cNqk5otAwItnPkpeNvJKNsRylhrsndmFfAIiztJ4QU";
 
+            // Debug 模式下，開放視窗縮放功能。反之，視窗為全螢幕。
             if (Debugger.IsAttached)
             {
-                //btnFormControl.Visible = true;
+                btnFormControl.Visible = true;
                 btnFormControl.Click += BtnFormControl_Click;
             }
+            else WindowState = FormWindowState.Maximized;
         }
 
+        /// <summary>
+        /// 視窗縮放 (點擊事件)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnFormControl_Click(object sender, EventArgs e)
         {
             if (btnFormControl.Change) WindowState = FormWindowState.Normal;
             else WindowState = FormWindowState.Maximized;
         }
 
+        private void btnMini_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        /// <summary>
+        /// 關閉程式 (點擊事件)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btPower_Click(object sender, EventArgs e)
         {
+            RosSharp_Tool.Close_ROS();
             Application.Exit();
         }
 
         #region Navibar
+        private const int SW_NORMAL = 1;
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        [System.Runtime.InteropServices.DllImport("User32.dll")]
+        private static extern bool SetForegroundWindow(IntPtr handle);
+
+        private IntPtr handle;
+
+        /// <summary>
+        /// 返回主頁 (點擊事件)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -80,60 +104,18 @@ namespace CNCAppPlatform
             SetForegroundWindow(handle);
         }
 
-        private void btnOrderLog_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Menu 1 (點擊事件)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void menu_1_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
             btnColor(button);
             if (!(button.Tag is Form))
             {
-                Control frame = new Control()
-                {
-                    Dock = DockStyle.Fill,
-                    TopLevel = false,
-                    Parent = panel1,
-                    FormBorderStyle = FormBorderStyle.None
-                };
-
-                button.Tag = frame;
-            }
-
-            Tag = button.Tag;
-
-            (button.Tag as Form).Show();
-
-            moduleTitle.Text = button.Text.Trim();
-        }
-
-        private void btnDeviceOverall_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            btnColor(button);
-            if (!(button.Tag is Form))
-            {
-                deviceOverview frame = new deviceOverview()
-                {
-                    Dock = DockStyle.Fill,
-                    TopLevel = false,
-                    Parent = panel1,
-                    FormBorderStyle = FormBorderStyle.None
-                };
-
-                button.Tag = frame;
-            }
-
-            Tag = button.Tag;
-            (button.Tag as Form).Show();
-
-            moduleTitle.Text = button.Text.Trim();
-        }
-
-        private void btnPlcSetting_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            btnColor(button);
-            if (!(button.Tag is Form))
-            {
-                PlcConn plcConn = new PlcConn()
+                dynamic plcConn = new Control()
                 {
                     Dock = DockStyle.Fill,
                     TopLevel = false,
@@ -150,7 +132,69 @@ namespace CNCAppPlatform
             moduleTitle.Text = button.Text.Trim();
         }
 
-        private void btnPlcTest_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Menu 2 (點擊事件)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void menu_2_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            btnColor(button);
+            if (!(button.Tag is Form))
+            {
+                dynamic frame = new SocketTest()
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    Parent = panel1,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+
+                button.Tag = frame;
+            }
+
+            Tag = button.Tag;
+
+            (button.Tag as Form).Show();
+
+            moduleTitle.Text = button.Text.Trim();
+        }
+
+        /// <summary>
+        /// Menu 3 (點擊事件)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void menu_3_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            btnColor(button);
+            if (!(button.Tag is Form))
+            {
+                dynamic frame = new Hand_eye()
+                {
+                    Dock = DockStyle.Fill,
+                    TopLevel = false,
+                    Parent = panel1,
+                    FormBorderStyle = FormBorderStyle.None
+                };
+
+                button.Tag = frame;
+            }
+
+            Tag = button.Tag;
+            (button.Tag as Form).Show();
+
+            moduleTitle.Text = button.Text.Trim();
+        }
+
+        /// <summary>
+        /// menu test1 (點擊事件)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void menu_test1_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
             btnColor(button);
@@ -173,6 +217,11 @@ namespace CNCAppPlatform
             moduleTitle.Text = button.Text.Trim();
         }
 
+        /// <summary>
+        /// 設定 (點擊事件)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSetting_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
@@ -196,9 +245,13 @@ namespace CNCAppPlatform
             moduleTitle.Text = button.Text.Trim();
         }
 
+        /// <summary>
+        /// 按鈕選中後渲染
+        /// </summary>
+        /// <param name="btn"></param>
         private void btnColor(Button btn)
         {
-            Button[] tbtn = new Button[] { btnPlcSetting, btnOrderLog, btnDeviceOverView, btnSetting, btnPlcTest };
+            Button[] tbtn = new Button[] { menu_1, menu_2, menu_3, menu_setting, menu_test1 };
             btn.BackColor = Color.DodgerBlue;
             slidePanel.Top = btn.Top + 114;
             slidePanel.Visible = true;
@@ -222,14 +275,20 @@ namespace CNCAppPlatform
             //machineState1.timer1.Enabled = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+    }
+    public class myButton : Button
+    {
+        public myButton()
         {
-            string inputDir = AppDomain.CurrentDomain.BaseDirectory + "common_msgs/";
-            string outputdir = AppDomain.CurrentDomain.BaseDirectory + "Messages";
-            Console.WriteLine("开始生成ROS Messages...\n");
-            GenerateHelper.GenerateMsgAndSrv(inputDir, outputdir);
-            Console.WriteLine("生成完成");
-            Console.ReadLine();
+            this.FlatStyle = FlatStyle.Flat;
+            this.FlatAppearance.BorderSize = 0;
+            this.Font = new Font("微軟正黑體", 14, FontStyle.Bold);
+            this.ForeColor = Color.White;
+            this.TextAlign = ContentAlignment.MiddleRight;
+            this.TextImageRelation = TextImageRelation.ImageBeforeText;
+            //this.BackColor = Color.Black;
+        
         }
     }
 

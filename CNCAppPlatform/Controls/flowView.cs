@@ -11,7 +11,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Shapes;
 
 
-namespace CNCAppPlatform
+namespace RosSharp_HMI
 {
     public partial class flowView : UserControl
     {
