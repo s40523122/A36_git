@@ -250,5 +250,10 @@ namespace RosSharp_HMI
             await RosSharp_Tool.RosInit(server_ip.Text, 11311, local_ip.Text);
             _nh = RosSharp_Tool.nh;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RosSharp_HMI.Controls.MsgBox.Show("hi");
+        }
     }
 }

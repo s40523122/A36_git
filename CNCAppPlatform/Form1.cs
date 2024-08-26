@@ -18,6 +18,9 @@ namespace RosSharp_HMI
     {
         //private const int CS_DropShadow = 0x00020000;
 
+        /// <summary>
+        /// 專案 Debug 路徑
+        /// </summary>
         public static string debug_path = Application.StartupPath;
 
         /// <summary>
@@ -29,19 +32,16 @@ namespace RosSharp_HMI
             set { connStatusLabel.Text = value; }
         }
 
+        public static Size FormSize;
+        public static Point FormLocation;
+        public static Size WorkSize;
+
         public Form1()
         {
             InitializeComponent();
 
-            menu_1.Click += (sender, e) => menu_x_Click(sender, e, new Control());
-            menu_2.Click += (sender, e) => menu_x_Click(sender, e, new SocketTest());
-            menu_3.Click += (sender, e) => menu_x_Click(sender, e, new Hand_eye());
-            //menu_4.Click += (sender, e) => menu_x_Click(sender, e, new Control());
-            menu_setting.Click += (sender, e) => menu_x_Click(sender, e, new Form());
-            menu_test1.Click += (sender, e) => menu_x_Click(sender, e, new Form());
 
-            // 返回主頁
-            btnHome.Click += btnHome_Click;
+            MenuSetting();
 
             // 設定 Line Notify
             //JinToolkit.Services.LineNotify.connectToken = "4cNqk5otAwItnPkpeNvJKNsRylhrsndmFfAIiztJ4QU";
@@ -53,8 +53,31 @@ namespace RosSharp_HMI
                 btnFormControl.Click += BtnFormControl_Click;
             }
             else WindowState = FormWindowState.Maximized;
+
+            SizeChanged += Form1_SizeChanged;
         }
 
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            FormSize = Size;
+            FormLocation = Location;
+            WorkSize = panel1.Size;
+        }
+
+        private void MenuSetting()
+        {
+            menu_1.Click += (sender, e) => menu_x_Click(sender, e, new Control());
+            menu_2.Click += (sender, e) => menu_x_Click(sender, e, new SocketTest());
+            menu_3.Click += (sender, e) => menu_x_Click(sender, e, new Hand_eye());
+            //menu_4.Click += (sender, e) => menu_x_Click(sender, e, new Control());
+            menu_setting.Click += (sender, e) => menu_x_Click(sender, e, new Form());
+            menu_test1.Click += (sender, e) => menu_x_Click(sender, e, new Form());
+
+            // 返回主頁
+            btnHome.Click += btnHome_Click;
+        }
+
+        #region 視窗控制
         #region 視窗拖動設定
         private Point mousePoint = new Point();
         // 設定可拖動畫面
@@ -73,6 +96,8 @@ namespace RosSharp_HMI
                 this.Top = Control.MousePosition.Y - mousePoint.Y;
                 this.Left = Control.MousePosition.X - panel4.Width - mousePoint.X;
             }
+
+            FormLocation = Location;
         }
         #endregion
 
@@ -107,6 +132,7 @@ namespace RosSharp_HMI
             RosSharp_Tool.Close_ROS();
             Application.Exit();
         }
+        #endregion
 
         #region Navibar
         private const int SW_NORMAL = 1;
@@ -182,7 +208,6 @@ namespace RosSharp_HMI
             if (Tag is Form) (Tag as Form).Hide();
         }
         #endregion
-
         private void info_Click(object sender, EventArgs e)
         {
             //LineNotify hachunGroup = new LineNotify("ZZkOh8kZn3QLj9hGmy8lfWygcTCekFl1wBbPlavR2LX");
@@ -195,20 +220,6 @@ namespace RosSharp_HMI
         }
 
         
-    }
-    public class myButton : Button
-    {
-        public myButton()
-        {
-            this.FlatStyle = FlatStyle.Flat;
-            this.FlatAppearance.BorderSize = 0;
-            this.Font = new Font("微軟正黑體", 14, FontStyle.Bold);
-            this.ForeColor = Color.White;
-            this.TextAlign = ContentAlignment.MiddleRight;
-            this.TextImageRelation = TextImageRelation.ImageBeforeText;
-            //this.BackColor = Color.Black;
-        
-        }
     }
 
 }

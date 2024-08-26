@@ -46,6 +46,7 @@ namespace RosSharp_HMI
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMini = new System.Windows.Forms.Button();
+            this.btnFormControl = new ART_plus.DoubleImg();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btFold = new System.Windows.Forms.PictureBox();
@@ -55,15 +56,14 @@ namespace RosSharp_HMI
             this.panel5 = new System.Windows.Forms.Panel();
             this.connStatusLabel = new System.Windows.Forms.Label();
             this.moduleTitle = new System.Windows.Forms.Label();
-            this.btnFormControl = new ART_plus.DoubleImg();
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.info)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btFold)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFormControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btFold)).BeginInit();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -312,6 +312,22 @@ namespace RosSharp_HMI
             this.btnMini.UseVisualStyleBackColor = true;
             this.btnMini.Click += new System.EventHandler(this.btnMini_Click);
             // 
+            // btnFormControl
+            // 
+            this.btnFormControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFormControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFormControl.Change = true;
+            this.btnFormControl.Image = ((System.Drawing.Image)(resources.GetObject("btnFormControl.Image")));
+            this.btnFormControl.Location = new System.Drawing.Point(1011, 9);
+            this.btnFormControl.Name = "btnFormControl";
+            this.btnFormControl.SetSquare = true;
+            this.btnFormControl.Size = new System.Drawing.Size(27, 27);
+            this.btnFormControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnFormControl.SubImg = ((System.Drawing.Image)(resources.GetObject("btnFormControl.SubImg")));
+            this.btnFormControl.TabIndex = 5;
+            this.btnFormControl.TabStop = false;
+            this.btnFormControl.Tag = ((object)(resources.GetObject("btnFormControl.Tag")));
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
@@ -403,22 +419,6 @@ namespace RosSharp_HMI
             this.moduleTitle.Text = "³]³Æª¬ºAºÊ±±App";
             this.moduleTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnFormControl
-            // 
-            this.btnFormControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFormControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFormControl.Change = true;
-            this.btnFormControl.Image = ((System.Drawing.Image)(resources.GetObject("btnFormControl.Image")));
-            this.btnFormControl.Location = new System.Drawing.Point(1011, 9);
-            this.btnFormControl.Name = "btnFormControl";
-            this.btnFormControl.SetSquare = true;
-            this.btnFormControl.Size = new System.Drawing.Size(27, 27);
-            this.btnFormControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnFormControl.SubImg = ((System.Drawing.Image)(resources.GetObject("btnFormControl.SubImg")));
-            this.btnFormControl.TabIndex = 5;
-            this.btnFormControl.TabStop = false;
-            this.btnFormControl.Tag = ((object)(resources.GetObject("btnFormControl.Tag")));
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -442,8 +442,8 @@ namespace RosSharp_HMI
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btFold)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFormControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btFold)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
