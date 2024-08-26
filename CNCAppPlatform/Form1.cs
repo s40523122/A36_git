@@ -52,6 +52,27 @@ namespace RosSharp_HMI
             else WindowState = FormWindowState.Maximized;
         }
 
+        #region 視窗拖動設定
+        private Point mousePoint = new Point();
+        // 設定可拖動畫面
+        void panel_title_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            this.mousePoint.X = e.X;
+            this.mousePoint.Y = e.Y;
+        }
+
+        private void panel_title_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Top = Control.MousePosition.Y - mousePoint.Y;
+                this.Left = Control.MousePosition.X - panel4.Width - mousePoint.X;
+            }
+        }
+        #endregion
+
         /// <summary>
         /// 視窗縮放 (點擊事件)
         /// </summary>
@@ -253,7 +274,7 @@ namespace RosSharp_HMI
         {
             Button[] tbtn = new Button[] { menu_1, menu_2, menu_3, menu_setting, menu_test1 };
             btn.BackColor = Color.DodgerBlue;
-            slidePanel.Top = btn.Top + 114;
+            slidePanel.Top = btn.Top + btn.Parent.Top;
             slidePanel.Visible = true;
             foreach (var item in tbtn)
             {

@@ -300,6 +300,8 @@ namespace RosSharp_HMI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1090, 46);
             this.panel2.TabIndex = 1;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseMove);
             // 
             // btnMini
             // 

@@ -40,7 +40,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.hand_coordinateView = new RosSharp_HMI.Controls.CoordinateView();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.eye_coordinateView = new RosSharp_HMI.Controls.CoordinateView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -61,6 +59,8 @@
             this.button13 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.eye_coordinateView = new RosSharp_HMI.Controls.CoordinateView();
+            this.hand_coordinateView = new RosSharp_HMI.Controls.CoordinateView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -232,14 +232,6 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "[    ]";
             // 
-            // hand_coordinateView
-            // 
-            this.hand_coordinateView.BackColor = System.Drawing.Color.Black;
-            this.hand_coordinateView.Location = new System.Drawing.Point(31, 49);
-            this.hand_coordinateView.Name = "hand_coordinateView";
-            this.hand_coordinateView.Size = new System.Drawing.Size(250, 250);
-            this.hand_coordinateView.TabIndex = 0;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -337,14 +329,6 @@
             this.button8.Text = "正轉";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // eye_coordinateView
-            // 
-            this.eye_coordinateView.BackColor = System.Drawing.Color.Black;
-            this.eye_coordinateView.Location = new System.Drawing.Point(31, 49);
-            this.eye_coordinateView.Name = "eye_coordinateView";
-            this.eye_coordinateView.Size = new System.Drawing.Size(250, 250);
-            this.eye_coordinateView.TabIndex = 0;
             // 
             // groupBox7
             // 
@@ -485,6 +469,22 @@
             this.label7.Size = new System.Drawing.Size(101, 26);
             this.label7.TabIndex = 2;
             this.label7.Text = "旋轉矩陣:";
+            // 
+            // eye_coordinateView
+            // 
+            this.eye_coordinateView.BackColor = System.Drawing.Color.Black;
+            this.eye_coordinateView.Location = new System.Drawing.Point(31, 49);
+            this.eye_coordinateView.Name = "eye_coordinateView";
+            this.eye_coordinateView.Size = new System.Drawing.Size(250, 250);
+            this.eye_coordinateView.TabIndex = 0;
+            // 
+            // hand_coordinateView
+            // 
+            this.hand_coordinateView.BackColor = System.Drawing.Color.Black;
+            this.hand_coordinateView.Location = new System.Drawing.Point(31, 49);
+            this.hand_coordinateView.Name = "hand_coordinateView";
+            this.hand_coordinateView.Size = new System.Drawing.Size(250, 250);
+            this.hand_coordinateView.TabIndex = 0;
             // 
             // Hand_eye
             // 

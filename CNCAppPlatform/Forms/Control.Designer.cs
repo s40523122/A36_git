@@ -59,7 +59,6 @@
             this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.coordinateView1 = new RosSharp_HMI.Controls.CoordinateView();
             this.rosConn1 = new RosSharp_HMI.Controls.RosRemoteConnectBtn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.info)).BeginInit();
@@ -337,20 +336,12 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(223, 130);
+            this.pictureBox1.Location = new System.Drawing.Point(737, 175);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(753, 571);
+            this.pictureBox1.Size = new System.Drawing.Size(381, 251);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            // 
-            // coordinateView1
-            // 
-            this.coordinateView1.BackColor = System.Drawing.Color.Black;
-            this.coordinateView1.Location = new System.Drawing.Point(721, 235);
-            this.coordinateView1.Name = "coordinateView1";
-            this.coordinateView1.Size = new System.Drawing.Size(175, 181);
-            this.coordinateView1.TabIndex = 17;
             // 
             // rosConn1
             // 
@@ -378,7 +369,6 @@
             this.ClientSize = new System.Drawing.Size(1284, 701);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.coordinateView1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -430,6 +420,5 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn no;
         private System.Windows.Forms.DataGridViewTextBoxColumn data;
-        private Controls.CoordinateView coordinateView1;
     }
 }
