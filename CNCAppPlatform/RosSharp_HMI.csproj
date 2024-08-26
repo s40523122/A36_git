@@ -162,7 +162,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActUtlTypeLib.cs" />
     <Compile Include="AddItemButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,12 +177,6 @@
     <Compile Include="Controls\myPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\PlcConnectionBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\PlcConnectionBox.Designer.cs">
-      <DependentUpon>PlcConnectionBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\RosRemoteConnectBtn.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,53 +186,11 @@
     <Compile Include="Controls\sshConn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Task\Agv.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Task\Agv.Designer.cs">
-      <DependentUpon>Agv.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Task\TR1844.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Task\TR1844.Designer.cs">
-      <DependentUpon>TR1844.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Task\TS0082-1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Task\TS0082-1.Designer.cs">
-      <DependentUpon>TS0082-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Task\TS0082_2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Task\TS0082_2.Designer.cs">
-      <DependentUpon>TS0082_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Task\TS0082_3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Task\TS0082_3.Designer.cs">
-      <DependentUpon>TS0082_3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Task\TS0131.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Task\TS0131.Designer.cs">
-      <DependentUpon>TS0131.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Hand-eye.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Hand-eye.Designer.cs">
       <DependentUpon>Hand-eye.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\OrderLog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\OrderLog.Designer.cs">
-      <DependentUpon>OrderLog.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Control.cs">
       <SubType>Form</SubType>
@@ -261,12 +212,6 @@
     </Compile>
     <Compile Include="Services\LineNotify.cs" />
     <Compile Include="Services\RosSharp_Tool.cs" />
-    <Compile Include="Controls\flowView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\flowView.Designer.cs">
-      <DependentUpon>flowView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,37 +226,7 @@
     <Compile Include="Controls\LabelLED.Designer.cs">
       <DependentUpon>LabelLED.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\LayoutView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Controls\LayoutView.Designer.cs">
-      <DependentUpon>LayoutView.cs</DependentUpon>
-    </Compile>
     <Compile Include="LineNotify.cs" />
-    <Compile Include="Forms\OrderInputFrame.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\OrderInputFrame.Designer.cs">
-      <DependentUpon>OrderInputFrame.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\PlcConn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PlcConn.Designer.cs">
-      <DependentUpon>PlcConn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\PlcControl.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PlcControl.Designer.cs">
-      <DependentUpon>PlcControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\PlcRW_Test.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\PlcRW_Test.Designer.cs">
-      <DependentUpon>PlcRW_Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controls\SpeedBar.cs">
@@ -325,65 +240,23 @@
     <EmbeddedResource Include="AddItemButton.resx">
       <DependentUpon>AddItemButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\PlcConnectionBox.resx">
-      <DependentUpon>PlcConnectionBox.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Controls\RosRemoteConnectBtn.resx">
       <DependentUpon>RosRemoteConnectBtn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\sshConn.resx">
       <DependentUpon>sshConn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Task\Agv.resx">
-      <DependentUpon>Agv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Task\TR1844.resx">
-      <DependentUpon>TR1844.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Task\TS0082-1.resx">
-      <DependentUpon>TS0082-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Task\TS0082_2.resx">
-      <DependentUpon>TS0082_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Task\TS0082_3.resx">
-      <DependentUpon>TS0082_3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Task\TS0131.resx">
-      <DependentUpon>TS0131.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Hand-eye.resx">
       <DependentUpon>Hand-eye.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OrderLog.resx">
-      <DependentUpon>OrderLog.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Control.resx">
       <DependentUpon>Control.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\flowView.resx">
-      <DependentUpon>flowView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\LabelLED.resx">
       <DependentUpon>LabelLED.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\LayoutView.resx">
-      <DependentUpon>LayoutView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OrderInputFrame.resx">
-      <DependentUpon>OrderInputFrame.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PlcConn.resx">
-      <DependentUpon>PlcConn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PlcControl.resx">
-      <DependentUpon>PlcControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\PlcRW_Test.resx">
-      <DependentUpon>PlcRW_Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SocketTest.resx">
       <DependentUpon>SocketTest.cs</DependentUpon>

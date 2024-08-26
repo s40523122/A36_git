@@ -10,8 +10,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using RosSharp_HMI.Services;
-//using ActUtlTypeLib;
-using ActUtlTypeLib.test;
 
 namespace RosSharp_HMI
 {
@@ -20,7 +18,6 @@ namespace RosSharp_HMI
     {
         //private const int CS_DropShadow = 0x00020000;
 
-        public static ActUtlType axActUtlType = new ActUtlType();       // PLC
         public static string debug_path = Application.StartupPath;
 
         /// <summary>
@@ -217,25 +214,25 @@ namespace RosSharp_HMI
         /// <param name="e"></param>
         private void menu_test1_Click(object sender, EventArgs e)
         {
-            Button button = sender as Button;
-            btnColor(button);
-            if (!(button.Tag is Form))
-            {
-                PlcControl plcControl = new PlcControl()
-                {
-                    Dock = DockStyle.Fill,
-                    TopLevel = false,
-                    Parent = panel1,
-                    FormBorderStyle = FormBorderStyle.None
-                };
+            //Button button = sender as Button;
+            //btnColor(button);
+            //if (!(button.Tag is Form))
+            //{
+            //    PlcControl plcControl = new PlcControl()
+            //    {
+            //        Dock = DockStyle.Fill,
+            //        TopLevel = false,
+            //        Parent = panel1,
+            //        FormBorderStyle = FormBorderStyle.None
+            //    };
 
-                button.Tag = plcControl;
-            }
+            //    button.Tag = plcControl;
+            //}
 
-            Tag = button.Tag;
-            (button.Tag as Form).Show();
+            //Tag = button.Tag;
+            //(button.Tag as Form).Show();
 
-            moduleTitle.Text = button.Text.Trim();
+            //moduleTitle.Text = button.Text.Trim();
         }
 
         /// <summary>
