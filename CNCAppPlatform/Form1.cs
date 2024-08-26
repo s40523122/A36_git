@@ -32,7 +32,13 @@ namespace RosSharp_HMI
         public Form1()
         {
             InitializeComponent();
-            
+
+            menu_1.Click += (sender, e) => menu_x_Click(sender, e, new Control());
+            menu_2.Click += (sender, e) => menu_x_Click(sender, e, new SocketTest());
+            menu_3.Click += (sender, e) => menu_x_Click(sender, e, new Hand_eye());
+            //menu_4.Click += (sender, e) => menu_x_Click(sender, e, new Control());
+            menu_setting.Click += (sender, e) => menu_x_Click(sender, e, new Form());
+            menu_test1.Click += (sender, e) => menu_x_Click(sender, e, new Form());
 
             // 返回主頁
             btnHome.Click += btnHome_Click;
@@ -81,6 +87,11 @@ namespace RosSharp_HMI
             else WindowState = FormWindowState.Maximized;
         }
 
+        /// <summary>
+        /// 視窗最小化 (點擊事件)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMini_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
@@ -114,6 +125,12 @@ namespace RosSharp_HMI
         /// <param name="e"></param>
         private void btnHome_Click(object sender, EventArgs e)
         {
+            if (Debugger.IsAttached)
+            {
+                MessageBox.Show("現在是偵錯模式!");
+                return;
+            }
+            
             this.WindowState = FormWindowState.Minimized;
             Process[] processName = Process.GetProcessesByName("iCAPS");
             var p = System.Diagnostics.Process.GetProcessesByName("iCAPS").FirstOrDefault();
@@ -123,138 +140,22 @@ namespace RosSharp_HMI
         }
 
         /// <summary>
-        /// Menu 1 (點擊事件)
+        /// Menu 點擊事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void menu_1_Click(object sender, EventArgs e)
+        private void menu_x_Click(object sender, EventArgs e, Form frame)
         {
             Button button = sender as Button;
             btnColor(button);
             if (!(button.Tag is Form))
             {
-                dynamic plcConn = new Control()
-                {
-                    Dock = DockStyle.Fill,
-                    TopLevel = false,
-                    Parent = panel1,
-                    FormBorderStyle = FormBorderStyle.None
-                };
-
-                button.Tag = plcConn;
-            }
-
-            Tag = button.Tag;
-            (button.Tag as Form).Show();
-
-            moduleTitle.Text = button.Text.Trim();
-        }
-
-        /// <summary>
-        /// Menu 2 (點擊事件)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void menu_2_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            btnColor(button);
-            if (!(button.Tag is Form))
-            {
-                dynamic frame = new SocketTest()
-                {
-                    Dock = DockStyle.Fill,
-                    TopLevel = false,
-                    Parent = panel1,
-                    FormBorderStyle = FormBorderStyle.None
-                };
+                frame.Dock = DockStyle.Fill;
+                frame.TopLevel = false;
+                frame.Parent = panel1;
+                frame.FormBorderStyle = FormBorderStyle.None;
 
                 button.Tag = frame;
-            }
-
-            Tag = button.Tag;
-
-            (button.Tag as Form).Show();
-
-            moduleTitle.Text = button.Text.Trim();
-        }
-
-        /// <summary>
-        /// Menu 3 (點擊事件)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void menu_3_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            btnColor(button);
-            if (!(button.Tag is Form))
-            {
-                dynamic frame = new Hand_eye()
-                {
-                    Dock = DockStyle.Fill,
-                    TopLevel = false,
-                    Parent = panel1,
-                    FormBorderStyle = FormBorderStyle.None
-                };
-
-                button.Tag = frame;
-            }
-
-            Tag = button.Tag;
-            (button.Tag as Form).Show();
-
-            moduleTitle.Text = button.Text.Trim();
-        }
-
-        /// <summary>
-        /// menu test1 (點擊事件)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void menu_test1_Click(object sender, EventArgs e)
-        {
-            //Button button = sender as Button;
-            //btnColor(button);
-            //if (!(button.Tag is Form))
-            //{
-            //    PlcControl plcControl = new PlcControl()
-            //    {
-            //        Dock = DockStyle.Fill,
-            //        TopLevel = false,
-            //        Parent = panel1,
-            //        FormBorderStyle = FormBorderStyle.None
-            //    };
-
-            //    button.Tag = plcControl;
-            //}
-
-            //Tag = button.Tag;
-            //(button.Tag as Form).Show();
-
-            //moduleTitle.Text = button.Text.Trim();
-        }
-
-        /// <summary>
-        /// 設定 (點擊事件)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnSetting_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            btnColor(button);
-            if (!(button.Tag is Form))
-            {
-                Control plcControl = new Control()
-                {
-                    Dock = DockStyle.Fill,
-                    TopLevel = false,
-                    Parent = panel1,
-                    FormBorderStyle = FormBorderStyle.None
-                };
-
-                button.Tag = plcControl;
             }
 
             Tag = button.Tag;
