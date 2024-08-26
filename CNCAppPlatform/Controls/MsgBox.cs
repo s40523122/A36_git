@@ -36,17 +36,18 @@ namespace RosSharp_HMI.Controls
             TopMost = true;
             
             FormBorderStyle = FormBorderStyle.None;
-            Width = Form1.WorkSize.Width;
-            int calcHeight = Form1.WorkSize.Height / 2;
+            Width = Form1.FormSize.Width;
+            int calcHeight = Form1.FormSize.Height / 3;
             Height = calcHeight < 380 ? calcHeight : 380;
-            Location = new Point(Form1.FormLocation.X + Form1.FormSize.Width - Form1.WorkSize.Width, Form1.FormLocation.Y + 123 + Form1.WorkSize.Height / 4);
+            Location = new Point(Form1.FormLocation.X , Form1.FormLocation.Y + (Form1.FormSize.Height - Height) / 2);
             //Anchor = AnchorStyles.None;
         }
 
-        public static void Show(string msg)
+        public static void Show(string msg, string title = "Message")
         {
             RosSharp_HMI.Controls.MsgBox thisform = new RosSharp_HMI.Controls.MsgBox();
-            thisform.label1.Text = thisform.Height.ToString();
+            thisform.label1.Text = title;
+            thisform.richTextBox1.Text = msg;
             thisform.ShowDialog();
             thisform.backForm.Close();
         }
