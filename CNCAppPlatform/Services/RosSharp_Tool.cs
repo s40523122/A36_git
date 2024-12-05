@@ -3,6 +3,7 @@ using RosSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,22 +18,37 @@ namespace RosSharp_HMI.Services
         //public static string ros_host_ip = "192.168.32.164";
         public static NodeHandle nh;
 
-        public async static Task RosInit(string ros_server_ip, int ros_server_port, string ros_host_ip)
+        public async static Task<bool> RosInit(string ros_server_ip, int ros_server_port, string ros_host_ip)
         {
             ROS.ROS_IP = ros_server_ip;
             ROS.ROS_MASTER_URI = $"http://{ros_server_ip}:{ros_server_port}";
             ROS.ROS_HOSTNAME = ros_host_ip;
-
+            // MessageBox.Show($"{ROS.GlobalCallbackQueue == null}");
+            // Master.
             await Task.Run(() =>
             {
                 ROS.Init("ros_sharp");
                 nh = new NodeHandle();
-                MessageBox.Show("OK");
-            });
 
-            //ROS.Init("ros_sharp");
-            //nh = new NodeHandle();
-            
+                // MessageBox.Show($"{ROS.GlobalCallbackQueue == null}");
+
+                // Close_ROS();
+
+                // 使用反射 (Reflection) 修改非 public 參數
+                // var type = typeof(ROS); // 用該套件的類型替換
+                // var fieldInfo = type.GetField("initialized", BindingFlags.NonPublic | BindingFlags.Static);
+                // fieldInfo.SetValue(null, false); // 將新值設為你希望的重設值
+
+                // MessageBox.Show("OK");
+            });
+            return true;            
+        }
+
+        private void RosSubTest()
+        {
+            //Subscriber<Messages.tf2_msgs.TFMessage> sub = nh.Subscribe<Messages.tf2_msgs.TFMessage>("/tf", 10, tfsubCallback);
+
+            //sub.Shutdown();
         }
 
         /// <summary>

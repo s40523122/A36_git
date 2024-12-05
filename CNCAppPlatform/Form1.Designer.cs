@@ -37,6 +37,7 @@ namespace RosSharp_HMI
             this.menu_1 = new System.Windows.Forms.Button();
             this.menu_2 = new System.Windows.Forms.Button();
             this.menu_3 = new System.Windows.Forms.Button();
+            this.menu_4 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.menu_test1 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -52,6 +53,7 @@ namespace RosSharp_HMI
             this.btFold = new System.Windows.Forms.PictureBox();
             this.btPower = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.welcome1 = new RosSharp_HMI.Forms.Welcome();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.connStatusLabel = new System.Windows.Forms.Label();
@@ -64,6 +66,7 @@ namespace RosSharp_HMI
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFormControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btFold)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -77,15 +80,15 @@ namespace RosSharp_HMI
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(210, 683);
+            this.sidePanel.Size = new System.Drawing.Size(210, 645);
             this.sidePanel.TabIndex = 0;
             // 
             // slidePanel
             // 
             this.slidePanel.BackColor = System.Drawing.Color.DarkOrange;
-            this.slidePanel.Location = new System.Drawing.Point(0, 325);
+            this.slidePanel.Location = new System.Drawing.Point(0, 352);
             this.slidePanel.Name = "slidePanel";
-            this.slidePanel.Size = new System.Drawing.Size(8, 75);
+            this.slidePanel.Size = new System.Drawing.Size(8, 81);
             this.slidePanel.TabIndex = 2;
             this.slidePanel.Visible = false;
             // 
@@ -93,9 +96,9 @@ namespace RosSharp_HMI
             // 
             this.info.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.info.Image = ((System.Drawing.Image)(resources.GetObject("info.Image")));
-            this.info.Location = new System.Drawing.Point(3, 436);
+            this.info.Location = new System.Drawing.Point(3, 377);
             this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(30, 30);
+            this.info.Size = new System.Drawing.Size(30, 33);
             this.info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.info.TabIndex = 2;
             this.info.TabStop = false;
@@ -107,10 +110,11 @@ namespace RosSharp_HMI
             this.flowLayoutPanel1.Controls.Add(this.menu_1);
             this.flowLayoutPanel1.Controls.Add(this.menu_2);
             this.flowLayoutPanel1.Controls.Add(this.menu_3);
+            this.flowLayoutPanel1.Controls.Add(this.menu_4);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 105);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 114);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(210, 338);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(210, 270);
             this.flowLayoutPanel1.TabIndex = 15;
             // 
             // menu_1
@@ -125,7 +129,7 @@ namespace RosSharp_HMI
             this.menu_1.Location = new System.Drawing.Point(3, 3);
             this.menu_1.Name = "menu_1";
             this.menu_1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.menu_1.Size = new System.Drawing.Size(204, 74);
+            this.menu_1.Size = new System.Drawing.Size(204, 80);
             this.menu_1.TabIndex = 2;
             this.menu_1.Text = "  主程序";
             this.menu_1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,10 +145,10 @@ namespace RosSharp_HMI
             this.menu_2.ForeColor = System.Drawing.Color.White;
             this.menu_2.Image = ((System.Drawing.Image)(resources.GetObject("menu_2.Image")));
             this.menu_2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_2.Location = new System.Drawing.Point(3, 83);
+            this.menu_2.Location = new System.Drawing.Point(3, 89);
             this.menu_2.Name = "menu_2";
             this.menu_2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.menu_2.Size = new System.Drawing.Size(204, 74);
+            this.menu_2.Size = new System.Drawing.Size(204, 80);
             this.menu_2.TabIndex = 2;
             this.menu_2.Text = "    socket 測試";
             this.menu_2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -160,15 +164,34 @@ namespace RosSharp_HMI
             this.menu_3.ForeColor = System.Drawing.Color.White;
             this.menu_3.Image = ((System.Drawing.Image)(resources.GetObject("menu_3.Image")));
             this.menu_3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_3.Location = new System.Drawing.Point(3, 163);
+            this.menu_3.Location = new System.Drawing.Point(3, 175);
             this.menu_3.Name = "menu_3";
             this.menu_3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.menu_3.Size = new System.Drawing.Size(204, 74);
+            this.menu_3.Size = new System.Drawing.Size(204, 80);
             this.menu_3.TabIndex = 2;
             this.menu_3.Text = "   姿態設定";
             this.menu_3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.menu_3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.menu_3.UseVisualStyleBackColor = false;
+            // 
+            // menu_4
+            // 
+            this.menu_4.BackColor = System.Drawing.Color.SteelBlue;
+            this.menu_4.FlatAppearance.BorderSize = 0;
+            this.menu_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menu_4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.menu_4.ForeColor = System.Drawing.Color.White;
+            this.menu_4.Image = ((System.Drawing.Image)(resources.GetObject("menu_4.Image")));
+            this.menu_4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menu_4.Location = new System.Drawing.Point(3, 261);
+            this.menu_4.Name = "menu_4";
+            this.menu_4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.menu_4.Size = new System.Drawing.Size(204, 80);
+            this.menu_4.TabIndex = 2;
+            this.menu_4.Text = " ssh設定";
+            this.menu_4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.menu_4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.menu_4.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel2
             // 
@@ -179,14 +202,14 @@ namespace RosSharp_HMI
             this.tableLayoutPanel2.Controls.Add(this.btnHome, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.menu_setting, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 443);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 384);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(210, 240);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(210, 261);
             this.tableLayoutPanel2.TabIndex = 14;
             // 
             // menu_test1
@@ -199,10 +222,10 @@ namespace RosSharp_HMI
             this.menu_test1.ForeColor = System.Drawing.Color.White;
             this.menu_test1.Image = ((System.Drawing.Image)(resources.GetObject("menu_test1.Image")));
             this.menu_test1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_test1.Location = new System.Drawing.Point(3, 3);
+            this.menu_test1.Location = new System.Drawing.Point(3, 4);
             this.menu_test1.Name = "menu_test1";
             this.menu_test1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.menu_test1.Size = new System.Drawing.Size(204, 74);
+            this.menu_test1.Size = new System.Drawing.Size(204, 80);
             this.menu_test1.TabIndex = 2;
             this.menu_test1.Text = "  PLC 讀寫測試";
             this.menu_test1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -220,10 +243,10 @@ namespace RosSharp_HMI
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(3, 163);
+            this.btnHome.Location = new System.Drawing.Point(3, 178);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(204, 74);
+            this.btnHome.Size = new System.Drawing.Size(204, 80);
             this.btnHome.TabIndex = 4;
             this.btnHome.Text = "  返回主頁";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -239,10 +262,10 @@ namespace RosSharp_HMI
             this.menu_setting.ForeColor = System.Drawing.Color.White;
             this.menu_setting.Image = ((System.Drawing.Image)(resources.GetObject("menu_setting.Image")));
             this.menu_setting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_setting.Location = new System.Drawing.Point(3, 83);
+            this.menu_setting.Location = new System.Drawing.Point(3, 91);
             this.menu_setting.Name = "menu_setting";
             this.menu_setting.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.menu_setting.Size = new System.Drawing.Size(204, 74);
+            this.menu_setting.Size = new System.Drawing.Size(204, 80);
             this.menu_setting.TabIndex = 4;
             this.menu_setting.Text = " 設定";
             this.menu_setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -257,16 +280,16 @@ namespace RosSharp_HMI
             this.panel4.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(210, 105);
+            this.panel4.Size = new System.Drawing.Size(210, 114);
             this.panel4.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(0, 67);
+            this.label2.Location = new System.Drawing.Point(0, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(260, 35);
+            this.label2.Size = new System.Drawing.Size(260, 38);
             this.label2.TabIndex = 3;
             this.label2.Text = "  智慧電腦輔助生產系統";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -277,13 +300,14 @@ namespace RosSharp_HMI
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(0, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(260, 56);
+            this.label3.Size = new System.Drawing.Size(260, 61);
             this.label3.TabIndex = 4;
             this.label3.Text = "iCAPS";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.SlateGray;
             this.panel2.Controls.Add(this.btnMini);
             this.panel2.Controls.Add(this.btnFormControl);
             this.panel2.Controls.Add(this.panel3);
@@ -293,7 +317,7 @@ namespace RosSharp_HMI
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(210, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1090, 42);
+            this.panel2.Size = new System.Drawing.Size(780, 46);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_title_MouseMove);
@@ -305,9 +329,9 @@ namespace RosSharp_HMI
             this.btnMini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMini.FlatAppearance.BorderSize = 0;
             this.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMini.Location = new System.Drawing.Point(964, 9);
+            this.btnMini.Location = new System.Drawing.Point(654, 10);
             this.btnMini.Name = "btnMini";
-            this.btnMini.Size = new System.Drawing.Size(29, 27);
+            this.btnMini.Size = new System.Drawing.Size(29, 29);
             this.btnMini.TabIndex = 6;
             this.btnMini.UseVisualStyleBackColor = true;
             this.btnMini.Click += new System.EventHandler(this.btnMini_Click);
@@ -316,12 +340,12 @@ namespace RosSharp_HMI
             // 
             this.btnFormControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFormControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFormControl.Change = true;
+            this.btnFormControl.Change = false;
             this.btnFormControl.Image = ((System.Drawing.Image)(resources.GetObject("btnFormControl.Image")));
-            this.btnFormControl.Location = new System.Drawing.Point(1011, 9);
+            this.btnFormControl.Location = new System.Drawing.Point(701, 10);
             this.btnFormControl.Name = "btnFormControl";
             this.btnFormControl.SetSquare = true;
-            this.btnFormControl.Size = new System.Drawing.Size(27, 27);
+            this.btnFormControl.Size = new System.Drawing.Size(25, 25);
             this.btnFormControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnFormControl.SubImg = ((System.Drawing.Image)(resources.GetObject("btnFormControl.SubImg")));
             this.btnFormControl.TabIndex = 5;
@@ -332,17 +356,17 @@ namespace RosSharp_HMI
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 41);
+            this.panel3.Location = new System.Drawing.Point(0, 45);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1090, 1);
+            this.panel3.Size = new System.Drawing.Size(780, 1);
             this.panel3.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(43, 9);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Location = new System.Drawing.Point(43, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 27);
             this.label1.TabIndex = 3;
@@ -351,9 +375,9 @@ namespace RosSharp_HMI
             // btFold
             // 
             this.btFold.Image = ((System.Drawing.Image)(resources.GetObject("btFold.Image")));
-            this.btFold.Location = new System.Drawing.Point(17, 12);
+            this.btFold.Location = new System.Drawing.Point(17, 13);
             this.btFold.Name = "btFold";
-            this.btFold.Size = new System.Drawing.Size(20, 20);
+            this.btFold.Size = new System.Drawing.Size(20, 22);
             this.btFold.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btFold.TabIndex = 2;
             this.btFold.TabStop = false;
@@ -364,20 +388,30 @@ namespace RosSharp_HMI
             this.btPower.FlatAppearance.BorderSize = 0;
             this.btPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btPower.Image = ((System.Drawing.Image)(resources.GetObject("btPower.Image")));
-            this.btPower.Location = new System.Drawing.Point(1059, 12);
+            this.btPower.Location = new System.Drawing.Point(749, 13);
             this.btPower.Name = "btPower";
-            this.btPower.Size = new System.Drawing.Size(20, 20);
+            this.btPower.Size = new System.Drawing.Size(20, 22);
             this.btPower.TabIndex = 0;
             this.btPower.UseVisualStyleBackColor = true;
             this.btPower.Click += new System.EventHandler(this.btPower_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(35)))), ((int)(((byte)(44)))));
+            this.panel1.Controls.Add(this.welcome1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(210, 123);
+            this.panel1.Location = new System.Drawing.Point(210, 131);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1090, 560);
+            this.panel1.Size = new System.Drawing.Size(780, 514);
             this.panel1.TabIndex = 5;
+            // 
+            // welcome1
+            // 
+            this.welcome1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(35)))), ((int)(((byte)(44)))));
+            this.welcome1.Location = new System.Drawing.Point(30, 25);
+            this.welcome1.Name = "welcome1";
+            this.welcome1.Size = new System.Drawing.Size(512, 430);
+            this.welcome1.TabIndex = 0;
             // 
             // timer1
             // 
@@ -388,9 +422,9 @@ namespace RosSharp_HMI
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(210, 122);
+            this.panel5.Location = new System.Drawing.Point(210, 130);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1090, 1);
+            this.panel5.Size = new System.Drawing.Size(780, 1);
             this.panel5.TabIndex = 44;
             // 
             // connStatusLabel
@@ -398,7 +432,7 @@ namespace RosSharp_HMI
             this.connStatusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.connStatusLabel.AutoSize = true;
             this.connStatusLabel.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.connStatusLabel.Location = new System.Drawing.Point(1023, 67);
+            this.connStatusLabel.Location = new System.Drawing.Point(713, 73);
             this.connStatusLabel.Name = "connStatusLabel";
             this.connStatusLabel.Size = new System.Drawing.Size(180, 27);
             this.connStatusLabel.TabIndex = 43;
@@ -407,23 +441,25 @@ namespace RosSharp_HMI
             // moduleTitle
             // 
             this.moduleTitle.AutoSize = true;
-            this.moduleTitle.BackColor = System.Drawing.SystemColors.Control;
+            this.moduleTitle.BackColor = System.Drawing.Color.Black;
             this.moduleTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.moduleTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.moduleTitle.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.moduleTitle.Location = new System.Drawing.Point(210, 42);
+            this.moduleTitle.ForeColor = System.Drawing.Color.White;
+            this.moduleTitle.Location = new System.Drawing.Point(210, 46);
             this.moduleTitle.Name = "moduleTitle";
-            this.moduleTitle.Padding = new System.Windows.Forms.Padding(20);
-            this.moduleTitle.Size = new System.Drawing.Size(314, 80);
+            this.moduleTitle.Padding = new System.Windows.Forms.Padding(20, 22, 20, 22);
+            this.moduleTitle.Size = new System.Drawing.Size(314, 84);
             this.moduleTitle.TabIndex = 42;
             this.moduleTitle.Text = "設備狀態監控App";
             this.moduleTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 683);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(990, 645);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.connStatusLabel);
@@ -444,6 +480,7 @@ namespace RosSharp_HMI
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFormControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btFold)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -477,6 +514,8 @@ namespace RosSharp_HMI
         private System.Windows.Forms.Button menu_setting;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnMini;
+        private System.Windows.Forms.Button menu_4;
+        private Forms.Welcome welcome1;
     }
 }
 

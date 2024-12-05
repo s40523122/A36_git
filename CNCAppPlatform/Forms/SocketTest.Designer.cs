@@ -81,7 +81,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 79);
+            this.label1.Location = new System.Drawing.Point(99, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 73);
             this.label1.TabIndex = 2;
@@ -99,7 +99,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(576, 79);
+            this.label2.Location = new System.Drawing.Point(602, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(202, 73);
             this.label2.TabIndex = 2;
@@ -145,6 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1388, 748);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.richTextBox1);

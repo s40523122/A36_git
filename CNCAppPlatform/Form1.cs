@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using RosSharp_HMI.Services;
+using System.Threading;
 
 namespace RosSharp_HMI
 {
@@ -34,7 +35,6 @@ namespace RosSharp_HMI
 
         public static Size FormSize;
         public static Point FormLocation;
-        public static Size WorkSize;
 
         public Form1()
         {
@@ -46,13 +46,8 @@ namespace RosSharp_HMI
             // 設定 Line Notify
             //JinToolkit.Services.LineNotify.connectToken = "4cNqk5otAwItnPkpeNvJKNsRylhrsndmFfAIiztJ4QU";
 
-            // Debug 模式下，開放視窗縮放功能。反之，視窗為全螢幕。
-            if (Debugger.IsAttached)
-            {
-                btnFormControl.Visible = true;
-                btnFormControl.Click += BtnFormControl_Click;
-            }
-            else WindowState = FormWindowState.Maximized;
+            WindowState = FormWindowState.Maximized;
+            btnFormControl.Click += BtnFormControl_Click;
 
             SizeChanged += Form1_SizeChanged;
         }
@@ -61,15 +56,17 @@ namespace RosSharp_HMI
         {
             FormSize = Size;
             FormLocation = Location;
-            WorkSize = panel1.Size;
         }
 
+        /// <summary>
+        /// 設定菜單頁中各按鈕導向
+        /// </summary>
         private void MenuSetting()
         {
-            menu_1.Click += (sender, e) => menu_x_Click(sender, e, new Control());
+            menu_1.Click += (sender, e) => menu_x_Click(sender, e, new ControlFrame());
             menu_2.Click += (sender, e) => menu_x_Click(sender, e, new SocketTest());
             menu_3.Click += (sender, e) => menu_x_Click(sender, e, new Hand_eye());
-            //menu_4.Click += (sender, e) => menu_x_Click(sender, e, new Control());
+            menu_4.Click += (sender, e) => menu_x_Click(sender, e, new SshTest());
             menu_setting.Click += (sender, e) => menu_x_Click(sender, e, new Form());
             menu_test1.Click += (sender, e) => menu_x_Click(sender, e, new Form());
 
@@ -83,6 +80,8 @@ namespace RosSharp_HMI
         // 設定可拖動畫面
         void panel_title_MouseDown(object sender, MouseEventArgs e)
         {
+            WindowState = FormWindowState.Normal;
+            if (!btnFormControl.Change) btnFormControl.Change = true;
             base.OnMouseDown(e);
             this.mousePoint.X = e.X;
             this.mousePoint.Y = e.Y;
@@ -93,11 +92,11 @@ namespace RosSharp_HMI
             base.OnMouseMove(e);
             if (e.Button == MouseButtons.Left)
             {
-                this.Top = Control.MousePosition.Y - mousePoint.Y;
-                this.Left = Control.MousePosition.X - panel4.Width - mousePoint.X;
+                this.Top = MousePosition.Y - mousePoint.Y;
+                this.Left = MousePosition.X - panel4.Width - mousePoint.X;
             }
 
-            FormLocation = Location;
+            //FormLocation = Location;
         }
         #endregion
 
@@ -130,6 +129,7 @@ namespace RosSharp_HMI
         private void btPower_Click(object sender, EventArgs e)
         {
             RosSharp_Tool.Close_ROS();
+            Thread.Sleep(1000);
             Application.Exit();
         }
         #endregion
@@ -219,7 +219,6 @@ namespace RosSharp_HMI
             //machineState1.timer1.Enabled = true;
         }
 
-        
     }
 
 }

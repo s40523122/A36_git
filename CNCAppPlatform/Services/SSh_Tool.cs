@@ -49,6 +49,17 @@ namespace RosSharp_HMI.Services
             });
         }
 
+        private string StringToRtf(string line)
+        {
+            if (Regex.IsMatch(line, @"\x1b\]0;")) return "";     // 略過終端機提示符
+            if (Regex.IsMatch(line, @"\x1b\]2;")) line = "";
+            if (Regex.IsMatch(line, @"\x1b\[1m")) line = line.Substring(4);     // 略過淺色白字轉換
+            if (Regex.IsMatch(line, @"\x1b\[31m")) line = line.Replace(@"[31m", @"\cf2").Substring(1);      // 字串轉換紅色字
+            if (Regex.IsMatch(line, @"\x1b\[0m")) line = line.Replace(@"[0m", @" \cf1 ");       // 字串轉換白色字
+
+            return line + @" \par ";        // 加上換行符號
+        }
+
         /// <summary>
         /// 執行命令
         /// </summary>
@@ -90,15 +101,7 @@ namespace RosSharp_HMI.Services
                         //while ((line = reader.ReadLine()) != null) if (line == command) break;  // 略過 ssh 連接訊息
                         while ((line = reader.ReadLine()) != null)
                         {
-                            //Console.WriteLine(line);  // 在 Console 中顯示輸出
-
-                            if (Regex.IsMatch(line, @"\x1b\]0;")) continue;     // 略過終端機提示符
-                            if (Regex.IsMatch(line, @"\x1b\]2;")) line = "";
-                            if (Regex.IsMatch(line, @"\x1b\[1m")) line = line.Substring(4);     // 略過淺色白字轉換
-                            if (Regex.IsMatch(line, @"\x1b\[31m")) line = line.Replace(@"[31m", @"\cf2").Substring(1);      // 字串轉換紅色字
-                            if (Regex.IsMatch(line, @"\x1b\[0m")) line = line.Replace(@"[0m", @" \cf1 ");       // 字串轉換白色字
-
-                            RtfLine += line + @" \par ";        // 加上換行符號
+                            RtfLine += StringToRtf( line );
 
                             bool close = false;
                             log_window.Invoke(new MethodInvoker(delegate

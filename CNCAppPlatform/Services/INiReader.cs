@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Configuration;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -69,6 +71,43 @@ namespace RosSharp_HMI.Services
             GetPrivateProfileString(section, key, "", buffer, bufferSize, path);
 
             return buffer.ToString();
+        }
+
+        [DllImport("kernel32.dll")]
+        private static extern int GetPrivateProfileSection(string lpAppName, byte[] lpszReturnBuffer, int nSize, string lpFileName);
+        /// <summary>
+        /// 將Section內所有資料組成 [[Key, Value]] 列表
+        /// </summary>
+        /// <param name="iniFile"></param>
+        /// <param name="section"></param>
+        /// <returns></returns>
+        public static List<List<string>> GetAllList(string iniFile, string section)
+        {
+
+            byte[] buffer = new byte[2048];
+
+            GetPrivateProfileSection(section, buffer, 2048, iniFile);
+            String[] tmp = Encoding.ASCII.GetString(buffer).Trim('\0').Split('\0');
+
+            //List<string> result = new List<string>();
+            List<List<string>> resultList = new List<List<string>>();
+
+            if (tmp[0] != "")
+            {
+                resultList = tmp
+                .Select(item => item.Split('=').ToList())
+                .ToList();
+            }
+
+
+            //string jsonString = JsonConvert.SerializeObject(resultList, Formatting.Indented);
+
+            //foreach (String entry in tmp)
+            //{
+            //    result.Add(entry.Substring(0, entry.IndexOf("=")));
+            //}
+
+            return resultList;
         }
     }
 }
