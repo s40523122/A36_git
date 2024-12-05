@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlFrame));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.info = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -91,11 +91,9 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pose_index = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btn_get_fusion = new System.Windows.Forms.Button();
             this.btn_set_fusion = new System.Windows.Forms.Button();
             this.btn_get_y = new System.Windows.Forms.Button();
@@ -105,11 +103,17 @@
             this.btn_get_0 = new System.Windows.Forms.Button();
             this.btn_set_0 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.groupBoxForm1 = new JinToolkit.GroupBoxForm();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rosConn1 = new RosSharp_HMI.Controls.RosRemoteConnectBtn();
             this.groupBoxForm2 = new JinToolkit.GroupBoxForm();
             this.socket_response = new System.Windows.Forms.RichTextBox();
+            this.groupBoxForm1 = new JinToolkit.GroupBoxForm();
+            this.ros_stream = new System.Windows.Forms.PictureBox();
+            this.rosConn1 = new RosSharp_HMI.Controls.RosRemoteConnectBtn();
+            this.groupBoxForm3 = new JinToolkit.GroupBoxForm();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.groupBoxForm4 = new JinToolkit.GroupBoxForm();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.groupBoxForm5 = new JinToolkit.GroupBoxForm();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.info)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -118,11 +122,15 @@
             this.groupBox2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBoxForm1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBoxForm2.SuspendLayout();
+            this.groupBoxForm1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ros_stream)).BeginInit();
+            this.groupBoxForm3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.groupBoxForm4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.groupBoxForm5.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -605,55 +613,55 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.no,
             this.data});
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.Location = new System.Drawing.Point(205, 706);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView1.Size = new System.Drawing.Size(420, 460);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.Visible = false;
             // 
             // no
             // 
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
-            this.no.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            this.no.DefaultCellStyle = dataGridViewCellStyle10;
             this.no.HeaderText = "no";
             this.no.MinimumWidth = 6;
             this.no.Name = "no";
@@ -662,9 +670,9 @@
             // data
             // 
             this.data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
-            this.data.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            this.data.DefaultCellStyle = dataGridViewCellStyle11;
             this.data.HeaderText = "data";
             this.data.MinimumWidth = 6;
             this.data.Name = "data";
@@ -693,16 +701,20 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(419, 110);
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(8, 9);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 22);
+            this.textBox1.Size = new System.Drawing.Size(217, 25);
             this.textBox1.TabIndex = 22;
             // 
             // button4
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(419, 136);
+            this.button4.Location = new System.Drawing.Point(8, 35);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 23;
@@ -712,16 +724,20 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(419, 172);
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(8, 71);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 22);
+            this.textBox2.Size = new System.Drawing.Size(217, 25);
             this.textBox2.TabIndex = 22;
             // 
             // button5
             // 
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(419, 198);
+            this.button5.Location = new System.Drawing.Point(8, 97);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 23;
@@ -731,16 +747,20 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(419, 237);
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(8, 136);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 22);
+            this.textBox3.Size = new System.Drawing.Size(217, 25);
             this.textBox3.TabIndex = 22;
             // 
             // button6
             // 
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(420, 263);
+            this.button6.Location = new System.Drawing.Point(9, 162);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 23;
@@ -748,24 +768,12 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.pose_index);
-            this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Controls.Add(this.button7);
-            this.groupBox5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(160, 89);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(223, 158);
-            this.groupBox5.TabIndex = 24;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "手眼校正";
-            // 
             // pose_index
             // 
             this.pose_index.AutoSize = true;
-            this.pose_index.Location = new System.Drawing.Point(113, 45);
+            this.pose_index.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pose_index.ForeColor = System.Drawing.Color.White;
+            this.pose_index.Location = new System.Drawing.Point(95, 15);
             this.pose_index.Name = "pose_index";
             this.pose_index.Size = new System.Drawing.Size(18, 20);
             this.pose_index.TabIndex = 4;
@@ -774,7 +782,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 45);
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 4;
@@ -784,7 +794,9 @@
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Location = new System.Drawing.Point(21, 83);
+            this.button7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(11, 51);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(140, 53);
             this.button7.TabIndex = 3;
@@ -792,31 +804,12 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.btn_get_fusion);
-            this.groupBox6.Controls.Add(this.btn_set_fusion);
-            this.groupBox6.Controls.Add(this.btn_get_y);
-            this.groupBox6.Controls.Add(this.btn_set_y);
-            this.groupBox6.Controls.Add(this.btn_get_x);
-            this.groupBox6.Controls.Add(this.btn_set_x);
-            this.groupBox6.Controls.Add(this.btn_get_0);
-            this.groupBox6.Controls.Add(this.btn_set_0);
-            this.groupBox6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(160, 264);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(223, 158);
-            this.groupBox6.TabIndex = 24;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "multi setting";
-            // 
             // btn_get_fusion
             // 
             this.btn_get_fusion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_get_fusion.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_get_fusion.ForeColor = System.Drawing.Color.Black;
-            this.btn_get_fusion.Location = new System.Drawing.Point(117, 116);
+            this.btn_get_fusion.Location = new System.Drawing.Point(102, 93);
             this.btn_get_fusion.Name = "btn_get_fusion";
             this.btn_get_fusion.Size = new System.Drawing.Size(82, 24);
             this.btn_get_fusion.TabIndex = 23;
@@ -830,7 +823,7 @@
             this.btn_set_fusion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_set_fusion.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_set_fusion.ForeColor = System.Drawing.Color.Black;
-            this.btn_set_fusion.Location = new System.Drawing.Point(21, 116);
+            this.btn_set_fusion.Location = new System.Drawing.Point(6, 93);
             this.btn_set_fusion.Name = "btn_set_fusion";
             this.btn_set_fusion.Size = new System.Drawing.Size(82, 24);
             this.btn_set_fusion.TabIndex = 23;
@@ -844,7 +837,7 @@
             this.btn_get_y.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_get_y.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_get_y.ForeColor = System.Drawing.Color.Black;
-            this.btn_get_y.Location = new System.Drawing.Point(117, 87);
+            this.btn_get_y.Location = new System.Drawing.Point(102, 64);
             this.btn_get_y.Name = "btn_get_y";
             this.btn_get_y.Size = new System.Drawing.Size(82, 24);
             this.btn_get_y.TabIndex = 23;
@@ -856,9 +849,10 @@
             // btn_set_y
             // 
             this.btn_set_y.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_set_y.Enabled = false;
             this.btn_set_y.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_set_y.ForeColor = System.Drawing.Color.Black;
-            this.btn_set_y.Location = new System.Drawing.Point(21, 87);
+            this.btn_set_y.Location = new System.Drawing.Point(6, 64);
             this.btn_set_y.Name = "btn_set_y";
             this.btn_set_y.Size = new System.Drawing.Size(82, 24);
             this.btn_set_y.TabIndex = 23;
@@ -871,7 +865,7 @@
             this.btn_get_x.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_get_x.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_get_x.ForeColor = System.Drawing.Color.Black;
-            this.btn_get_x.Location = new System.Drawing.Point(117, 58);
+            this.btn_get_x.Location = new System.Drawing.Point(102, 35);
             this.btn_get_x.Name = "btn_get_x";
             this.btn_get_x.Size = new System.Drawing.Size(82, 24);
             this.btn_get_x.TabIndex = 23;
@@ -883,9 +877,10 @@
             // btn_set_x
             // 
             this.btn_set_x.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_set_x.Enabled = false;
             this.btn_set_x.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_set_x.ForeColor = System.Drawing.Color.Black;
-            this.btn_set_x.Location = new System.Drawing.Point(21, 58);
+            this.btn_set_x.Location = new System.Drawing.Point(6, 35);
             this.btn_set_x.Name = "btn_set_x";
             this.btn_set_x.Size = new System.Drawing.Size(82, 24);
             this.btn_set_x.TabIndex = 23;
@@ -898,7 +893,7 @@
             this.btn_get_0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_get_0.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_get_0.ForeColor = System.Drawing.Color.Black;
-            this.btn_get_0.Location = new System.Drawing.Point(117, 29);
+            this.btn_get_0.Location = new System.Drawing.Point(102, 6);
             this.btn_get_0.Name = "btn_get_0";
             this.btn_get_0.Size = new System.Drawing.Size(82, 24);
             this.btn_get_0.TabIndex = 23;
@@ -910,9 +905,10 @@
             // btn_set_0
             // 
             this.btn_set_0.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_set_0.Enabled = false;
             this.btn_set_0.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_set_0.ForeColor = System.Drawing.Color.Black;
-            this.btn_set_0.Location = new System.Drawing.Point(21, 29);
+            this.btn_set_0.Location = new System.Drawing.Point(6, 6);
             this.btn_set_0.Name = "btn_set_0";
             this.btn_set_0.Size = new System.Drawing.Size(82, 24);
             this.btn_set_0.TabIndex = 23;
@@ -933,50 +929,6 @@
             this.button9.Text = "重新連線";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // groupBoxForm1
-            // 
-            this.groupBoxForm1.Controls.Add(this.pictureBox1);
-            this.groupBoxForm1.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.groupBoxForm1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBoxForm1.ForeColor = System.Drawing.Color.White;
-            this.groupBoxForm1.Location = new System.Drawing.Point(680, 37);
-            this.groupBoxForm1.Name = "groupBoxForm1";
-            this.groupBoxForm1.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBoxForm1.Size = new System.Drawing.Size(500, 312);
-            this.groupBoxForm1.TabIndex = 27;
-            this.groupBoxForm1.TabStop = false;
-            this.groupBoxForm1.Text = "畫面監控";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(480, 270);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.Sub_Video);
-            // 
-            // rosConn1
-            // 
-            this.rosConn1.BackColor = System.Drawing.Color.Gray;
-            this.rosConn1.BodyColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
-            this.rosConn1.ColorDisable = System.Drawing.Color.Gray;
-            this.rosConn1.ColorEnable = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(250)))), ((int)(((byte)(51)))));
-            this.rosConn1.CommandTextFont = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.rosConn1.ConnectMode = RosSharp_HMI.Controls.ConnectEnum.Service;
-            this.rosConn1.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.rosConn1.Location = new System.Drawing.Point(9, 335);
-            this.rosConn1.Margin = new System.Windows.Forms.Padding(0);
-            this.rosConn1.Name = "rosConn1";
-            this.rosConn1.Radius = 10;
-            this.rosConn1.Size = new System.Drawing.Size(268, 73);
-            this.rosConn1.TabIndex = 9;
-            this.rosConn1.TaskText = "realsense_camera";
             // 
             // groupBoxForm2
             // 
@@ -1005,24 +957,146 @@
             this.socket_response.TabIndex = 19;
             this.socket_response.Text = "";
             // 
+            // groupBoxForm1
+            // 
+            this.groupBoxForm1.Controls.Add(this.ros_stream);
+            this.groupBoxForm1.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.groupBoxForm1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBoxForm1.ForeColor = System.Drawing.Color.White;
+            this.groupBoxForm1.Location = new System.Drawing.Point(680, 37);
+            this.groupBoxForm1.Name = "groupBoxForm1";
+            this.groupBoxForm1.Padding = new System.Windows.Forms.Padding(10);
+            this.groupBoxForm1.Size = new System.Drawing.Size(500, 312);
+            this.groupBoxForm1.TabIndex = 27;
+            this.groupBoxForm1.TabStop = false;
+            this.groupBoxForm1.Text = "畫面監控";
+            // 
+            // ros_stream
+            // 
+            this.ros_stream.BackColor = System.Drawing.Color.Black;
+            this.ros_stream.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ros_stream.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ros_stream.Location = new System.Drawing.Point(10, 32);
+            this.ros_stream.Name = "ros_stream";
+            this.ros_stream.Size = new System.Drawing.Size(480, 270);
+            this.ros_stream.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ros_stream.TabIndex = 12;
+            this.ros_stream.TabStop = false;
+            this.ros_stream.Click += new System.EventHandler(this.Sub_Video);
+            // 
+            // rosConn1
+            // 
+            this.rosConn1.BackColor = System.Drawing.Color.Gray;
+            this.rosConn1.BodyColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
+            this.rosConn1.ColorDisable = System.Drawing.Color.Gray;
+            this.rosConn1.ColorEnable = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(250)))), ((int)(((byte)(51)))));
+            this.rosConn1.CommandTextFont = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rosConn1.ConnectMode = RosSharp_HMI.Controls.ConnectEnum.Service;
+            this.rosConn1.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rosConn1.Location = new System.Drawing.Point(9, 335);
+            this.rosConn1.Margin = new System.Windows.Forms.Padding(0);
+            this.rosConn1.Name = "rosConn1";
+            this.rosConn1.Radius = 10;
+            this.rosConn1.Size = new System.Drawing.Size(268, 73);
+            this.rosConn1.TabIndex = 9;
+            this.rosConn1.TaskText = "realsense_camera";
+            // 
+            // groupBoxForm3
+            // 
+            this.groupBoxForm3.Controls.Add(this.panel5);
+            this.groupBoxForm3.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.groupBoxForm3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBoxForm3.ForeColor = System.Drawing.Color.White;
+            this.groupBoxForm3.Location = new System.Drawing.Point(155, 97);
+            this.groupBoxForm3.Name = "groupBoxForm3";
+            this.groupBoxForm3.Padding = new System.Windows.Forms.Padding(10);
+            this.groupBoxForm3.Size = new System.Drawing.Size(228, 161);
+            this.groupBoxForm3.TabIndex = 27;
+            this.groupBoxForm3.TabStop = false;
+            this.groupBoxForm3.Text = "手眼校正";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pose_index);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.button7);
+            this.panel5.Location = new System.Drawing.Point(19, 24);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(188, 124);
+            this.panel5.TabIndex = 29;
+            // 
+            // groupBoxForm4
+            // 
+            this.groupBoxForm4.Controls.Add(this.panel6);
+            this.groupBoxForm4.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.groupBoxForm4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBoxForm4.ForeColor = System.Drawing.Color.White;
+            this.groupBoxForm4.Location = new System.Drawing.Point(155, 264);
+            this.groupBoxForm4.Name = "groupBoxForm4";
+            this.groupBoxForm4.Padding = new System.Windows.Forms.Padding(10);
+            this.groupBoxForm4.Size = new System.Drawing.Size(228, 161);
+            this.groupBoxForm4.TabIndex = 29;
+            this.groupBoxForm4.TabStop = false;
+            this.groupBoxForm4.Text = "multi setting";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btn_get_fusion);
+            this.panel6.Controls.Add(this.btn_set_0);
+            this.panel6.Controls.Add(this.btn_set_fusion);
+            this.panel6.Controls.Add(this.btn_get_0);
+            this.panel6.Controls.Add(this.btn_get_y);
+            this.panel6.Controls.Add(this.btn_set_x);
+            this.panel6.Controls.Add(this.btn_set_y);
+            this.panel6.Controls.Add(this.btn_get_x);
+            this.panel6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.Location = new System.Drawing.Point(22, 30);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(188, 124);
+            this.panel6.TabIndex = 29;
+            // 
+            // groupBoxForm5
+            // 
+            this.groupBoxForm5.Controls.Add(this.panel7);
+            this.groupBoxForm5.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.groupBoxForm5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBoxForm5.ForeColor = System.Drawing.Color.White;
+            this.groupBoxForm5.Location = new System.Drawing.Point(394, 97);
+            this.groupBoxForm5.Name = "groupBoxForm5";
+            this.groupBoxForm5.Padding = new System.Windows.Forms.Padding(13);
+            this.groupBoxForm5.Size = new System.Drawing.Size(270, 235);
+            this.groupBoxForm5.TabIndex = 30;
+            this.groupBoxForm5.TabStop = false;
+            this.groupBoxForm5.Text = "Socket Sender";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.textBox1);
+            this.panel7.Controls.Add(this.textBox2);
+            this.panel7.Controls.Add(this.textBox3);
+            this.panel7.Controls.Add(this.button4);
+            this.panel7.Controls.Add(this.button5);
+            this.panel7.Controls.Add(this.button6);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel7.Location = new System.Drawing.Point(13, 35);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(244, 187);
+            this.panel7.TabIndex = 31;
+            // 
             // ControlFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(35)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(1707, 870);
+            this.ClientSize = new System.Drawing.Size(1724, 870);
+            this.Controls.Add(this.groupBoxForm5);
+            this.Controls.Add(this.groupBoxForm4);
             this.Controls.Add(this.groupBoxForm2);
+            this.Controls.Add(this.groupBoxForm3);
             this.Controls.Add(this.groupBoxForm1);
-            this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.richTextBox1);
@@ -1042,14 +1116,18 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBoxForm1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBoxForm2.ResumeLayout(false);
+            this.groupBoxForm1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ros_stream)).EndInit();
+            this.groupBoxForm3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.groupBoxForm4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.groupBoxForm5.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1060,7 +1138,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private Controls.RosRemoteConnectBtn rosConn1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ros_stream;
         private System.Windows.Forms.PictureBox info;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn no;
@@ -1112,11 +1190,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label pose_index;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button btn_get_fusion;
         private System.Windows.Forms.Button btn_set_fusion;
         private System.Windows.Forms.Button btn_get_y;
@@ -1129,5 +1205,11 @@
         private JinToolkit.GroupBoxForm groupBoxForm1;
         private JinToolkit.GroupBoxForm groupBoxForm2;
         private System.Windows.Forms.RichTextBox socket_response;
+        private JinToolkit.GroupBoxForm groupBoxForm3;
+        private System.Windows.Forms.Panel panel5;
+        private JinToolkit.GroupBoxForm groupBoxForm4;
+        private System.Windows.Forms.Panel panel6;
+        private JinToolkit.GroupBoxForm groupBoxForm5;
+        private System.Windows.Forms.Panel panel7;
     }
 }

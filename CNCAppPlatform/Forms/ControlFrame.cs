@@ -45,7 +45,7 @@ namespace RosSharp_HMI
 
             Load += Control_Load;
 
-            pictureBox1.SizeChanged += Stream_SizeChange_1080p;
+            //ros_stream.SizeChanged += Stream_SizeChange_1080p;
         }
 
         private void Control_Load(object sender, EventArgs e)
@@ -178,9 +178,9 @@ namespace RosSharp_HMI
             }
 
             // 在PictureBox中顯示圖像
-            pictureBox1.Invoke((MethodInvoker)delegate
+            ros_stream.Invoke((MethodInvoker)delegate
             {
-                pictureBox1.Image = bitmap;
+                ros_stream.Image = bitmap;
             });
         }
 
@@ -193,9 +193,9 @@ namespace RosSharp_HMI
                 Bitmap bitmap = new Bitmap(ms);
 
                 // 在PictureBox中顯示圖像
-                pictureBox1.Invoke((MethodInvoker)delegate
+                ros_stream.Invoke((MethodInvoker)delegate
                 {
-                    pictureBox1.Image = bitmap;
+                    ros_stream.Image = bitmap;
                 });
             }
         }
@@ -203,9 +203,16 @@ namespace RosSharp_HMI
         Subscriber<Messages.sensor_msgs.CompressedImage> sub_c;
         private void Sub_Video(object sender, EventArgs e)
         {
-            if (sub_c != null) sub_c.Shutdown();
+            if (sub_c != null)
+            {
+                sub_c.Shutdown();
+                sub_c = null;
+            }
             //Subscriber<Messages.sensor_msgs.Image> sub = nh.Subscribe<Messages.sensor_msgs.Image>("/camera/color/image_raw", 10, ReceiveImage);
-            sub_c = RosSharp_Tool.nh.Subscribe<Messages.sensor_msgs.CompressedImage>("/camera/color/image_raw/compressed", 10, ReceiveCompressedImage);
+            else
+            {
+                sub_c = RosSharp_Tool.nh.Subscribe<Messages.sensor_msgs.CompressedImage>("/camera/color/image_raw/compressed", 10, ReceiveCompressedImage);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -353,7 +360,7 @@ namespace RosSharp_HMI
         }
         private void btn_set_0_Click(object sender, EventArgs e)
         {
-            client.Send(textBox3.Text);
+
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -365,12 +372,12 @@ namespace RosSharp_HMI
         {
             Form _form = sender as Form;
 
-            int width_radio = pictureBox1.Width / 16;
-            int height_radio = pictureBox1.Height / 9;
+            int width_radio = ros_stream.Width / 16;
+            int height_radio = ros_stream.Height / 9;
 
             int min_radio = Math.Min(width_radio, height_radio);
 
-            pictureBox1.Size = new Size(min_radio*16, min_radio*9);
+            ros_stream.Size = new Size(min_radio*16, min_radio*9);
         }
     }
 }
