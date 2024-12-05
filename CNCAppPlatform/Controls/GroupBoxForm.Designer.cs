@@ -1,4 +1,4 @@
-﻿namespace RosSharp_HMI.Controls
+﻿namespace JinToolkit
 {
     partial class GroupBoxForm
     {

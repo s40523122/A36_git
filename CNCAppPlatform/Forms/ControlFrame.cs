@@ -45,13 +45,8 @@ namespace RosSharp_HMI
 
             Load += Control_Load;
 
-            AllowDrag(groupBox3);
-            AllowDrag(groupBox4);
-
-            pictureBox3.SizeChanged += Sub_page_SizeChanged;
+            pictureBox1.SizeChanged += Stream_SizeChange_1080p;
         }
-
-        
 
         private void Control_Load(object sender, EventArgs e)
         {
@@ -366,75 +361,16 @@ namespace RosSharp_HMI
             InitSocket();
         }
 
-        private void AllowDrag(Control ctrl)
-        {
-            ctrl.Cursor = Cursors.SizeAll;
-            ctrl.MouseDown += Drag_MouseDown;
-            ctrl.MouseMove += Drag_MouseMove;
-            ctrl.DoubleClick += Drag_DoubleClick;
-        }
-        
-        private Point mousePoint = new Point();
-        private void Drag_MouseDown(object sender, MouseEventArgs e)
-        {
-            //base.OnMouseDown(e);
-            mousePoint = e.Location;
-
-            Console.WriteLine(MousePosition.X);
-        }
-
-        private void Drag_MouseMove(object sender, MouseEventArgs e)
-        {
-            Control ctrl = sender as Control;
-
-            //base.OnMouseMove(e);
-            if (e.Button == MouseButtons.Left)
-            {
-                ctrl.Top += e.Y - mousePoint.Y;
-                ctrl.Left += e.X - mousePoint.X;
-            }
-        }
-        private void Drag_DoubleClick(object sender, EventArgs e)
-        {
-            (sender as Control).BringToFront();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Control control = sender as Control;
-            Form sub_page = new Form()
-            {
-                Text = groupBox3.Text,
-                Size = groupBox3.Size,
-                BackColor = Color.FromArgb(33, 35, 44),
-                FormBorderStyle = FormBorderStyle.SizableToolWindow,
-                Padding = new Padding(10),
-                StartPosition = FormStartPosition.CenterScreen
-            };
-            sub_page.Controls.Add(pictureBox1);
-  
-            sub_page.Show();
-
-            sub_page.FormClosed += Sub_page_FormClosed;
-            //sub_page.SizeChanged += Sub_page_SizeChanged;
-
-        }
-
-        private void Sub_page_SizeChanged(object sender, EventArgs e)
+        private void Stream_SizeChange_1080p(object sender, EventArgs e)
         {
             Form _form = sender as Form;
 
-            int width_radio = pictureBox3.Width / 16;
-            int height_radio = pictureBox3.Height / 9;
+            int width_radio = pictureBox1.Width / 16;
+            int height_radio = pictureBox1.Height / 9;
 
             int min_radio = Math.Min(width_radio, height_radio);
 
-            pictureBox3.Size = new Size(min_radio*16, min_radio*9);
-        }
-
-        private void Sub_page_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            groupBox3.Controls.Add(pictureBox1);
+            pictureBox1.Size = new Size(min_radio*16, min_radio*9);
         }
     }
 }
