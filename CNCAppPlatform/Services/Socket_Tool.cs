@@ -1,61 +1,76 @@
-﻿using System;
+﻿// 2025/01/14
+
+using System;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Net;
+using System.Windows.Forms;
+using System.Windows.Controls;
 
 namespace RosSharp_HMI.Services
 {
-    /*Server 
-        Socket_Server server = new Socket_Server(5000);
+    public class Socket_Tool
+    {
+        #region Server Sample
+        Socket_Server server = new Socket_Server(5000);     // 連線，開放所有 Client 端連線，需加入指定 port
 
-        // 連線，開放所有 Client 端連線，需加入指定 port //
+        private async void server_main()
+        {
             server.Start();
 
-            // 可用 server.Connected 檢查是否連線，初次檢查需等待連線1秒  
+            // 可用 server.Connected 檢查是否連線，初次檢查需等待連線1秒  (可選)
             await Task.Delay(1000);
-            if (server.Connected) richTextBox1.Text = "已開啟伺服器!";
+            if (server.Connected) Console.WriteLine( "已開啟伺服器!");
 
-        // 傳送訊息至 Client 端 //
-            server.SendToClient(textBox1.Text);  
-        
-        // 訂閱訊息接收事件，接收訊息為 e.Message //
+            // 不論如何，送送訊息給已連接的 client (可選)
+            server.SendToClient("Hi"); 
+
+            // 訂閱訊息接收事件，接收訊息為 e.Message
             server.MessageReceived += ServerMessageReceived;
-            private void ServerMessageReceived(object sender, Socket_Server.MessageEventArgs e)
-            {
-                richTextBox1.Invoke((MethodInvoker)delegate
-                {
-                    richTextBox1.Text = "收到客戶端消息：" + e.Message;
-                });
+            
+        }
+        private void ServerMessageReceived(object sender, Socket_Server.MessageEventArgs e)
+        {
+            //richTextBox1.Invoke((MethodInvoker)delegate
+            //{
+            //    richTextBox1.Text = "收到客戶端消息：" + e.Message;
+            //});
 
-                string response = "Received message: " + e.Message;
-                server.SendToClient(response); // 發送回應
-            }     
-    */
+            string response = "Received message: " + e.Message;
+            server.SendToClient(response); // 發送回應
+        }
+        #endregion
 
-    /*Client 
+        #region Client Sample
         Socket_Client client = new Socket_Client("192.168.32.164", 5000);
-
-        // 連線至指定 Server //
+        private async void client_main()
+        {
+            // 連線至指定 Server
             client.Connect();
 
-            // 可用 client.Connected 檢查是否連線，初次檢查需等待連線1秒  
+            // 可用 client.Connected 檢查是否連線，初次檢查需等待連線1秒  (可選)
             await Task.Delay(1000);
-            if (client.Connected) richTextBox2.Text = "已開啟伺服器!";
+            if (client.Connected) Console.WriteLine("已連線至伺服器!");
 
-        // 傳送訊息至 Server 端 //
-            client.Send(textBox2.Text);  
+            // 傳送訊息至 Server 端
+            client.Send("tell server i need");
 
-        // 訂閱訊息接收事件，接收訊息為 e.Message //
-            client.MessageReceived += ServerMessageReceived;
-            private void ServerMessageReceived(object sender, Socket_Server.MessageEventArgs e)
-            {
-               richTextBox2.Invoke((MethodInvoker)delegate
-               {
-                   richTextBox2.Text = "收到伺服器消息：" + e.Message;
-               });
-            }     
-    */
+            // 訂閱訊息接收事件，接收訊息為 e.Message
+            client.MessageReceived += ClientMessageReceived; ;
+        }
+
+        private void ClientMessageReceived(object sender, Socket_Client.MessageEventArgs e)
+        {
+            //richTextBox1.Invoke((MethodInvoker)delegate
+            //{
+            //    richTextBox1.Text = "收到客戶端消息：" + e.Message;
+            //});
+
+            string response = "Received message: " + e.Message;
+        }
+        #endregion
+    }
 
     class Socket_Server
     {

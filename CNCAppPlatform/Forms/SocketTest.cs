@@ -8,7 +8,7 @@ namespace RosSharp_HMI
     public partial class SocketTest : Form
     {
         Socket_Server server = new Socket_Server(5000);
-        Socket_Client client = new Socket_Client("192.168.1.101", 5000);
+        Socket_Client client = new Socket_Client("127.0.0.1", 5000);
 
         public SocketTest()
         {
