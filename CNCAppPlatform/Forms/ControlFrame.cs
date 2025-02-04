@@ -54,6 +54,8 @@ namespace RosSharp_HMI
             client.MessageReceived += Client_MessageReceived1;
 
             InitSocket();
+
+            
         }
 
         private async void InitSocket()
@@ -208,11 +210,13 @@ namespace RosSharp_HMI
             {
                 sub_c.Shutdown();
                 sub_c = null;
+                playbtn.Visible = true;
             }
             //Subscriber<Messages.sensor_msgs.Image> sub = nh.Subscribe<Messages.sensor_msgs.Image>("/camera/color/image_raw", 10, ReceiveImage);
             else
             {
                 sub_c = RosSharp_Tool.nh.Subscribe<Messages.sensor_msgs.CompressedImage>("/camera/color/image_raw/compressed", 10, ReceiveCompressedImage);
+                playbtn.Visible = false;
             }
         }
 
