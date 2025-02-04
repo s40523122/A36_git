@@ -10,7 +10,7 @@ namespace RosSharp_HMI
 {
     internal class ConnectionConfiguration
     {
-        static string layout_path = Path.Combine(Form1.debug_path, "config/layout.ini");
+        static string layout_path = Path.Combine(iCAPS.Env.debug_path, "config/layout.ini");
         static public string local_ip 
         { 
             get
@@ -26,7 +26,9 @@ namespace RosSharp_HMI
         {
             get
             {
-                return INiReader.ReadINIFile(layout_path, "Control", "remote_ip");
+                string ip = INiReader.ReadINIFile(layout_path, "Control", "remote_ip");
+                if (ip == "") ip = "127.0.0.1";
+                return ip;
             }
             set
             {
@@ -34,15 +36,20 @@ namespace RosSharp_HMI
             }
         }
 
-        static public string socket_port
+        static public int socket_port
         {
             get
             {
-                return INiReader.ReadINIFile(layout_path, "Control", "socket_port");
+                int portInt;
+                if (!int.TryParse(INiReader.ReadINIFile(layout_path, "Control", "socket_port"), out portInt))
+                {
+                    portInt = 0;
+                }
+                return portInt;
             }
             set
             {
-                INiReader.WriteINIFile(layout_path, "Control", "socket_port", value);
+                INiReader.WriteINIFile(layout_path, "Control", "socket_port", value.ToString());
             }
         }
 

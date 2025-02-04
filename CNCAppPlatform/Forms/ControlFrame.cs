@@ -22,6 +22,7 @@ using Messages.roscpp_tutorials;
 using Messages.topic_tools;
 using RosSharp_HMI.Services;
 using System.Numerics;
+using iCAPS;
 
 
 namespace RosSharp_HMI
@@ -34,10 +35,10 @@ namespace RosSharp_HMI
         string exec_txt = "roscore";
         string inter_txt = "disroscore";
 
-        string layout_path = Path.Combine(Form1.debug_path, "config/layout.ini");
-        static string hand_eye_poses_path = Path.Combine(Form1.debug_path, "config/hand_eye_poses.ini");
+        string layout_path = Path.Combine(Env.debug_path, "config/layout.ini");
+        static string hand_eye_poses_path = Path.Combine(Env.debug_path, "config/hand_eye_poses.ini");
 
-        Socket_Client client = new Socket_Client(ConnectionConfiguration.remote_ip, Int32.Parse(ConnectionConfiguration.socket_port));
+        Socket_Client client = new Socket_Client(ConnectionConfiguration.remote_ip, ConnectionConfiguration.socket_port);
 
         public ControlFrame()
         {
@@ -217,7 +218,7 @@ namespace RosSharp_HMI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            RosSharp_HMI.Controls.MsgBox.Show("hi");
+            MsgBox.Show("hi");
         }
 
         int record_index = 0;
@@ -307,7 +308,7 @@ namespace RosSharp_HMI
             client.Send(textBox3.Text);
         }
 
-        static List<List<string>> poses = INiReader.GetAllList(hand_eye_poses_path, "tsai");
+        static List<List<string>> poses = RosSharp_HMI.Services.INiReader.GetAllList(hand_eye_poses_path, "tsai");      // 需要調整為iCaps版本 !!!!!
         IEnumerator<List<string>> enumerator = poses.GetEnumerator();
 
         private async void button7_Click(object sender, EventArgs e)

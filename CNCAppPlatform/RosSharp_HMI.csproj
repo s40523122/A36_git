@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>RosSharp_HMI</RootNamespace>
     <AssemblyName>RosSharp_HMI</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -75,12 +76,14 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
-    <Reference Include="ActUtlTypeLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=627cb188e78f967a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>..\..\..\..\..\..\MELSEC\Act\Control\ActUtlTypeLib.dll</HintPath>
-    </Reference>
     <Reference Include="Common.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
       <HintPath>..\packages\Common.Logging.2.0.0\lib\2.0\Common.Logging.dll</HintPath>
     </Reference>
@@ -96,9 +99,9 @@
     <Reference Include="HZH_Controls">
       <HintPath>..\..\..\..\上研機電產創\Toptek\CNCAppPlatform\Controls\HZH_Controls.dll</HintPath>
     </Reference>
-    <Reference Include="iniRW, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="iCAPS_template, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\iniRW\iniRW\bin\Debug\iniRW.dll</HintPath>
+      <HintPath>..\..\iCAPS_template.dll</HintPath>
     </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
@@ -185,12 +188,6 @@
     <Compile Include="Controls\GroupBoxForm.Designer.cs">
       <DependentUpon>GroupBoxForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MsgBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Controls\MsgBox.Designer.cs">
-      <DependentUpon>MsgBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\myPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -203,17 +200,23 @@
     <Compile Include="Controls\sshConn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Hand-eye.cs">
+    <Compile Include="Forms\Hand_eye.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Hand-eye.Designer.cs">
-      <DependentUpon>Hand-eye.cs</DependentUpon>
+    <Compile Include="Forms\Hand_eye.Designer.cs">
+      <DependentUpon>Hand_eye.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ControlFrame.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ControlFrame.Designer.cs">
       <DependentUpon>ControlFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SocketTest.cs">
       <SubType>Form</SubType>
@@ -232,12 +235,6 @@
     </Compile>
     <Compile Include="Forms\Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MsgBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MsgBox.designer.cs">
-      <DependentUpon>MsgBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\LineNotify.cs" />
     <Compile Include="Services\RosSharp_Tool.cs" />
@@ -266,14 +263,14 @@
     </Compile>
     <Compile Include="Services\Socket_Tool.cs" />
     <Compile Include="Services\SSh_Tool.cs" />
+    <Compile Include="Std\ScalePadding.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="AddItemButton.resx">
       <DependentUpon>AddItemButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\GroupBoxForm.resx">
       <DependentUpon>GroupBoxForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\MsgBox.resx">
-      <DependentUpon>MsgBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\RosRemoteConnectBtn.resx">
       <DependentUpon>RosRemoteConnectBtn.cs</DependentUpon>
@@ -281,8 +278,8 @@
     <EmbeddedResource Include="Controls\sshConn.resx">
       <DependentUpon>sshConn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Hand-eye.resx">
-      <DependentUpon>Hand-eye.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Hand_eye.resx">
+      <DependentUpon>Hand_eye.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ControlFrame.resx">
       <DependentUpon>ControlFrame.cs</DependentUpon>
@@ -293,6 +290,9 @@
     <EmbeddedResource Include="Controls\LabelLED.resx">
       <DependentUpon>LabelLED.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SocketTest.resx">
       <DependentUpon>SocketTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,9 +301,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MsgBox.resx">
-      <DependentUpon>MsgBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -319,6 +316,7 @@
       <DependentUpon>SpeedBar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

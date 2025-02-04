@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace RosSharp_HMI
+namespace RosSharp_HMI.Forms
 {
-
-    public partial class Form1 : iCAPS.Form1
+    public partial class Setting : Form
     {
-        public Form1()
+        public Setting()
         {
             InitializeComponent();
         }
-
     }
-
 }

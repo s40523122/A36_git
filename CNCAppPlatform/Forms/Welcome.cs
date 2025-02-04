@@ -26,14 +26,21 @@ namespace RosSharp_HMI.Forms
         {
             local_ip.Text = ConnectionConfiguration.local_ip;
             remote_ip.Text = ConnectionConfiguration.remote_ip;
-            socket_port.Text = ConnectionConfiguration.socket_port;
+            socket_port.Text = ConnectionConfiguration.socket_port.ToString();
         }
 
         private async void connect_btn_Click(object sender, EventArgs e)
         {
             ConnectionConfiguration.local_ip = local_ip.Text;
             ConnectionConfiguration.remote_ip = remote_ip.Text;
-            ConnectionConfiguration.socket_port = socket_port.Text;
+
+            int portInt;
+            if (!int.TryParse(INiReader.ReadINIFile(socket_port.Text, "Control", "socket_port"), out portInt))
+            {
+                portInt = 0;
+            }
+
+            ConnectionConfiguration.socket_port = portInt;
 
             connect_btn.Visible = false;
             connect_btn.Visible = await RosSharp_Tool.RosInit(remote_ip.Text, 11311, local_ip.Text);
