@@ -220,17 +220,7 @@ namespace RosSharp_HMI
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            MsgBox.Show("hi");
-        }
-
         int record_index = 0;
-        
-        private void button8_Click(object sender, EventArgs e)
-        {
-            client.Send("INIT");
-        }
 
         
         // 當接收 Server 訊息時

@@ -29,16 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlFrame));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.info = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rosConn1 = new RosSharp_HMI.Controls.RosRemoteConnectBtn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -79,21 +84,19 @@
             this.label32 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.groupBoxForm5 = new JinToolkit.GroupBoxForm();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.scalePadding2 = new RosSharp_HMI.Std.ScalePadding();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button6 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBoxForm4 = new JinToolkit.GroupBoxForm();
+            this.scalePadding3 = new RosSharp_HMI.Std.ScalePadding();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_get_fusion = new System.Windows.Forms.Button();
             this.btn_set_0 = new System.Windows.Forms.Button();
             this.btn_set_fusion = new System.Windows.Forms.Button();
@@ -105,40 +108,37 @@
             this.groupBoxForm2 = new JinToolkit.GroupBoxForm();
             this.socket_response = new System.Windows.Forms.RichTextBox();
             this.groupBoxForm3 = new JinToolkit.GroupBoxForm();
-            this.pose_index = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.groupBoxForm1 = new JinToolkit.GroupBoxForm();
-            this.ros_stream = new System.Windows.Forms.PictureBox();
-            this.rosConn1 = new RosSharp_HMI.Controls.RosRemoteConnectBtn();
             this.scalePadding1 = new RosSharp_HMI.Std.ScalePadding();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.scalePadding2 = new RosSharp_HMI.Std.ScalePadding();
-            this.scalePadding3 = new RosSharp_HMI.Std.ScalePadding();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.pose_index = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBoxForm1 = new JinToolkit.GroupBoxForm();
             this.playbtn = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.ros_stream = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.info)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxForm5.SuspendLayout();
-            this.groupBoxForm4.SuspendLayout();
-            this.groupBoxForm2.SuspendLayout();
-            this.groupBoxForm3.SuspendLayout();
-            this.groupBoxForm1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ros_stream)).BeginInit();
-            this.scalePadding1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.scalePadding2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.groupBoxForm4.SuspendLayout();
             this.scalePadding3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.groupBoxForm2.SuspendLayout();
+            this.groupBoxForm3.SuspendLayout();
+            this.scalePadding1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.groupBoxForm1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playbtn)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ros_stream)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -146,14 +146,13 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
             this.panel1.Controls.Add(this.info);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.rosConn1);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(268, 845);
+            this.panel1.Size = new System.Drawing.Size(284, 845);
             this.panel1.TabIndex = 0;
             // 
             // info
@@ -180,6 +179,103 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.ssh_conn_Click);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.ForeColor = System.Drawing.Color.White;
+            this.richTextBox1.Location = new System.Drawing.Point(35, 158);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(133, 124);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "";
+            // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersVisible = false;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.no,
+            this.data});
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridView1.Location = new System.Drawing.Point(25, 306);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.dataGridView1.Size = new System.Drawing.Size(357, 191);
+            this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.Visible = false;
+            // 
+            // no
+            // 
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            this.no.DefaultCellStyle = dataGridViewCellStyle17;
+            this.no.HeaderText = "no";
+            this.no.MinimumWidth = 6;
+            this.no.Name = "no";
+            this.no.Width = 125;
+            // 
+            // data
+            // 
+            this.data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            this.data.DefaultCellStyle = dataGridViewCellStyle18;
+            this.data.HeaderText = "data";
+            this.data.MinimumWidth = 6;
+            this.data.Name = "data";
+            // 
+            // rosConn1
+            // 
+            this.rosConn1.BackColor = System.Drawing.Color.Gray;
+            this.rosConn1.BodyColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
+            this.rosConn1.ColorDisable = System.Drawing.Color.Gray;
+            this.rosConn1.ColorEnable = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(250)))), ((int)(((byte)(51)))));
+            this.rosConn1.CommandTextFont = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rosConn1.ConnectMode = RosSharp_HMI.Controls.ConnectEnum.Service;
+            this.rosConn1.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rosConn1.Location = new System.Drawing.Point(943, 461);
+            this.rosConn1.Margin = new System.Windows.Forms.Padding(0);
+            this.rosConn1.Name = "rosConn1";
+            this.rosConn1.Radius = 10;
+            this.rosConn1.Size = new System.Drawing.Size(237, 69);
+            this.rosConn1.TabIndex = 9;
+            this.rosConn1.TaskText = "realsense_camera";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanel4);
@@ -189,11 +285,11 @@
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(16, 494);
+            this.groupBox1.Location = new System.Drawing.Point(591, 418);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(237, 90);
+            this.groupBox1.Size = new System.Drawing.Size(268, 124);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "multi-landmark 姿態紀錄";
@@ -438,11 +534,11 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(16, 591);
+            this.groupBox2.Location = new System.Drawing.Point(307, 418);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(276, 172);
+            this.groupBox2.Size = new System.Drawing.Size(253, 124);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "landmark 姿態監控";
@@ -652,120 +748,15 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(11, 108);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(133, 124);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
-            // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.no,
-            this.data});
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle26;
-            this.dataGridView1.Location = new System.Drawing.Point(310, 443);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridView1.Size = new System.Drawing.Size(357, 340);
-            this.dataGridView1.TabIndex = 16;
-            this.dataGridView1.Visible = false;
-            // 
-            // no
-            // 
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
-            this.no.DefaultCellStyle = dataGridViewCellStyle24;
-            this.no.HeaderText = "no";
-            this.no.MinimumWidth = 6;
-            this.no.Name = "no";
-            this.no.Width = 125;
-            // 
-            // data
-            // 
-            this.data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
-            this.data.DefaultCellStyle = dataGridViewCellStyle25;
-            this.data.HeaderText = "data";
-            this.data.MinimumWidth = 6;
-            this.data.Name = "data";
-            // 
-            // button3
-            // 
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(705, 453);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 42);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "show HI";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
-            this.button8.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(849, 443);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(147, 52);
-            this.button8.TabIndex = 13;
-            this.button8.Text = "Send INIT";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button9.Location = new System.Drawing.Point(137, 10);
+            this.button9.Location = new System.Drawing.Point(629, 348);
             this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(120, 39);
+            this.button9.Size = new System.Drawing.Size(183, 55);
             this.button9.TabIndex = 3;
             this.button9.Text = "重新連線";
             this.button9.UseVisualStyleBackColor = false;
@@ -780,10 +771,113 @@
             this.groupBoxForm5.Location = new System.Drawing.Point(591, 37);
             this.groupBoxForm5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxForm5.Name = "groupBoxForm5";
-            this.groupBoxForm5.Size = new System.Drawing.Size(268, 377);
+            this.groupBoxForm5.Size = new System.Drawing.Size(268, 290);
             this.groupBoxForm5.TabIndex = 30;
             this.groupBoxForm5.TabStop = false;
             this.groupBoxForm5.Text = "Socket Sender";
+            // 
+            // scalePadding2
+            // 
+            this.scalePadding2.ColumnCount = 3;
+            this.scalePadding2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding2.Controls.Add(this.tableLayoutPanel3, 1, 1);
+            this.scalePadding2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scalePadding2.Init = true;
+            this.scalePadding2.Location = new System.Drawing.Point(3, 25);
+            this.scalePadding2.Name = "scalePadding2";
+            this.scalePadding2.RowCount = 3;
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding2.SetColumnRatio = 5F;
+            this.scalePadding2.SetRowRatio = 5F;
+            this.scalePadding2.Size = new System.Drawing.Size(262, 262);
+            this.scalePadding2.TabIndex = 31;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.button6, 0, 7);
+            this.tableLayoutPanel3.Controls.Add(this.textBox3, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.textBox2, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.button5, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button4, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(13, 13);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 8;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(235, 235);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // button6
+            // 
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(4, 201);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 26);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "send";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(4, 166);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(227, 25);
+            this.textBox3.TabIndex = 22;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(4, 85);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(227, 25);
+            this.textBox2.TabIndex = 22;
+            // 
+            // button5
+            // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(4, 120);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 26);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "send";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox1
             // 
@@ -796,34 +890,12 @@
             this.textBox1.Size = new System.Drawing.Size(227, 25);
             this.textBox1.TabIndex = 22;
             // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(4, 113);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(227, 25);
-            this.textBox2.TabIndex = 22;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(4, 222);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(227, 25);
-            this.textBox3.TabIndex = 22;
-            // 
             // button4
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(4, 51);
+            this.button4.Location = new System.Drawing.Point(4, 39);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 26);
@@ -832,47 +904,73 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
-            // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(4, 160);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 26);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "send";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(4, 269);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 26);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "send";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // groupBoxForm4
             // 
             this.groupBoxForm4.Controls.Add(this.scalePadding3);
             this.groupBoxForm4.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.groupBoxForm4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBoxForm4.ForeColor = System.Drawing.Color.White;
-            this.groupBoxForm4.Location = new System.Drawing.Point(307, 226);
+            this.groupBoxForm4.Location = new System.Drawing.Point(307, 216);
             this.groupBoxForm4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxForm4.Name = "groupBoxForm4";
             this.groupBoxForm4.Size = new System.Drawing.Size(239, 188);
             this.groupBoxForm4.TabIndex = 29;
             this.groupBoxForm4.TabStop = false;
             this.groupBoxForm4.Text = "multi setting";
+            // 
+            // scalePadding3
+            // 
+            this.scalePadding3.ColumnCount = 3;
+            this.scalePadding3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding3.Controls.Add(this.tableLayoutPanel2, 1, 1);
+            this.scalePadding3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scalePadding3.Init = true;
+            this.scalePadding3.Location = new System.Drawing.Point(3, 25);
+            this.scalePadding3.Name = "scalePadding3";
+            this.scalePadding3.RowCount = 3;
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding3.SetColumnRatio = 5F;
+            this.scalePadding3.SetRowRatio = 5F;
+            this.scalePadding3.Size = new System.Drawing.Size(233, 160);
+            this.scalePadding3.TabIndex = 31;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.btn_get_fusion, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btn_set_0, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_set_fusion, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btn_get_0, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_get_y, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btn_set_x, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btn_set_y, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btn_get_x, 1, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(11, 8);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(209, 144);
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btn_get_fusion
             // 
@@ -1038,96 +1136,6 @@
             this.groupBoxForm3.TabStop = false;
             this.groupBoxForm3.Text = "手眼校正";
             // 
-            // pose_index
-            // 
-            this.pose_index.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pose_index.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pose_index.ForeColor = System.Drawing.Color.White;
-            this.pose_index.Location = new System.Drawing.Point(139, 0);
-            this.pose_index.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.pose_index.Name = "pose_index";
-            this.pose_index.Size = new System.Drawing.Size(66, 64);
-            this.pose_index.TabIndex = 4;
-            this.pose_index.Text = "1";
-            this.pose_index.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(4, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 64);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "目前編號:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
-            this.tableLayoutPanel1.SetColumnSpan(this.button7, 2);
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(4, 68);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(201, 56);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "get calibration";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // groupBoxForm1
-            // 
-            this.groupBoxForm1.Controls.Add(this.playbtn);
-            this.groupBoxForm1.Controls.Add(this.ros_stream);
-            this.groupBoxForm1.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.groupBoxForm1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBoxForm1.ForeColor = System.Drawing.Color.White;
-            this.groupBoxForm1.Location = new System.Drawing.Point(901, 37);
-            this.groupBoxForm1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBoxForm1.Name = "groupBoxForm1";
-            this.groupBoxForm1.Padding = new System.Windows.Forms.Padding(13, 11, 13, 11);
-            this.groupBoxForm1.Size = new System.Drawing.Size(335, 228);
-            this.groupBoxForm1.TabIndex = 27;
-            this.groupBoxForm1.TabStop = false;
-            this.groupBoxForm1.Text = "畫面監控";
-            // 
-            // ros_stream
-            // 
-            this.ros_stream.BackColor = System.Drawing.Color.Black;
-            this.ros_stream.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ros_stream.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ros_stream.Location = new System.Drawing.Point(13, 33);
-            this.ros_stream.Margin = new System.Windows.Forms.Padding(4);
-            this.ros_stream.Name = "ros_stream";
-            this.ros_stream.Size = new System.Drawing.Size(309, 184);
-            this.ros_stream.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ros_stream.TabIndex = 12;
-            this.ros_stream.TabStop = false;
-            this.ros_stream.Click += new System.EventHandler(this.Sub_Video);
-            // 
-            // rosConn1
-            // 
-            this.rosConn1.BackColor = System.Drawing.Color.Gray;
-            this.rosConn1.BodyColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
-            this.rosConn1.ColorDisable = System.Drawing.Color.Gray;
-            this.rosConn1.ColorEnable = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(250)))), ((int)(((byte)(51)))));
-            this.rosConn1.CommandTextFont = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.rosConn1.ConnectMode = RosSharp_HMI.Controls.ConnectEnum.Service;
-            this.rosConn1.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.rosConn1.Location = new System.Drawing.Point(12, 386);
-            this.rosConn1.Margin = new System.Windows.Forms.Padding(0);
-            this.rosConn1.Name = "rosConn1";
-            this.rosConn1.Radius = 10;
-            this.rosConn1.Size = new System.Drawing.Size(357, 84);
-            this.rosConn1.TabIndex = 9;
-            this.rosConn1.TaskText = "realsense_camera";
-            // 
             // scalePadding1
             // 
             this.scalePadding1.ColumnCount = 3;
@@ -1140,6 +1148,12 @@
             this.scalePadding1.Location = new System.Drawing.Point(3, 25);
             this.scalePadding1.Name = "scalePadding1";
             this.scalePadding1.RowCount = 3;
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
@@ -1166,114 +1180,101 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(209, 128);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // scalePadding2
+            // pose_index
             // 
-            this.scalePadding2.ColumnCount = 3;
-            this.scalePadding2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding2.Controls.Add(this.tableLayoutPanel3, 1, 1);
-            this.scalePadding2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scalePadding2.Init = true;
-            this.scalePadding2.Location = new System.Drawing.Point(3, 25);
-            this.scalePadding2.Name = "scalePadding2";
-            this.scalePadding2.RowCount = 3;
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding2.SetColumnRatio = 5F;
-            this.scalePadding2.SetRowRatio = 5F;
-            this.scalePadding2.Size = new System.Drawing.Size(262, 349);
-            this.scalePadding2.TabIndex = 31;
+            this.pose_index.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pose_index.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pose_index.ForeColor = System.Drawing.Color.White;
+            this.pose_index.Location = new System.Drawing.Point(139, 0);
+            this.pose_index.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pose_index.Name = "pose_index";
+            this.pose_index.Size = new System.Drawing.Size(66, 64);
+            this.pose_index.TabIndex = 4;
+            this.pose_index.Text = "1";
+            this.pose_index.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // scalePadding3
+            // button7
             // 
-            this.scalePadding3.ColumnCount = 3;
-            this.scalePadding3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding3.Controls.Add(this.tableLayoutPanel2, 1, 1);
-            this.scalePadding3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scalePadding3.Init = true;
-            this.scalePadding3.Location = new System.Drawing.Point(3, 25);
-            this.scalePadding3.Name = "scalePadding3";
-            this.scalePadding3.RowCount = 3;
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding3.SetColumnRatio = 5F;
-            this.scalePadding3.SetRowRatio = 5F;
-            this.scalePadding3.Size = new System.Drawing.Size(233, 160);
-            this.scalePadding3.TabIndex = 31;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
+            this.tableLayoutPanel1.SetColumnSpan(this.button7, 2);
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(4, 68);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(201, 56);
+            this.button7.TabIndex = 3;
+            this.button7.Text = "get calibration";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // tableLayoutPanel2
+            // label4
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.btn_get_fusion, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.btn_set_0, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_set_fusion, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.btn_get_0, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_get_y, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btn_set_x, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btn_set_y, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btn_get_x, 1, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(11, 8);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(209, 144);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(4, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 64);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "目前編號:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tableLayoutPanel3
+            // groupBoxForm1
             // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.button6, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.textBox3, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.textBox2, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.button5, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button4, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(13, 17);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 8;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(235, 314);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.groupBoxForm1.Controls.Add(this.panel5);
+            this.groupBoxForm1.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.groupBoxForm1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBoxForm1.ForeColor = System.Drawing.Color.White;
+            this.groupBoxForm1.Location = new System.Drawing.Point(901, 37);
+            this.groupBoxForm1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxForm1.Name = "groupBoxForm1";
+            this.groupBoxForm1.Padding = new System.Windows.Forms.Padding(13, 11, 13, 11);
+            this.groupBoxForm1.Size = new System.Drawing.Size(335, 228);
+            this.groupBoxForm1.TabIndex = 27;
+            this.groupBoxForm1.TabStop = false;
+            this.groupBoxForm1.Text = "畫面監控";
             // 
             // playbtn
             // 
+            this.playbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.playbtn.BackColor = System.Drawing.Color.Transparent;
             this.playbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.playbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.playbtn.Image = ((System.Drawing.Image)(resources.GetObject("playbtn.Image")));
-            this.playbtn.Location = new System.Drawing.Point(129, 87);
+            this.playbtn.Location = new System.Drawing.Point(118, 53);
             this.playbtn.Name = "playbtn";
             this.playbtn.Size = new System.Drawing.Size(77, 75);
             this.playbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.playbtn.TabIndex = 0;
             this.playbtn.TabStop = false;
             this.playbtn.Click += new System.EventHandler(this.Sub_Video);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.playbtn);
+            this.panel5.Controls.Add(this.ros_stream);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(13, 33);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(309, 184);
+            this.panel5.TabIndex = 31;
+            // 
+            // ros_stream
+            // 
+            this.ros_stream.BackColor = System.Drawing.Color.Black;
+            this.ros_stream.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ros_stream.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ros_stream.Location = new System.Drawing.Point(0, 0);
+            this.ros_stream.Margin = new System.Windows.Forms.Padding(4);
+            this.ros_stream.Name = "ros_stream";
+            this.ros_stream.Size = new System.Drawing.Size(309, 184);
+            this.ros_stream.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ros_stream.TabIndex = 13;
+            this.ros_stream.TabStop = false;
             // 
             // ControlFrame
             // 
@@ -1282,16 +1283,15 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(35)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1290, 845);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxForm5);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxForm4);
+            this.Controls.Add(this.rosConn1);
             this.Controls.Add(this.groupBoxForm2);
             this.Controls.Add(this.groupBoxForm3);
-            this.Controls.Add(this.groupBoxForm1);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.groupBoxForm1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -1300,6 +1300,7 @@
             this.Text = "主控台";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.info)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
@@ -1308,21 +1309,21 @@
             this.groupBox2.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBoxForm5.ResumeLayout(false);
-            this.groupBoxForm4.ResumeLayout(false);
-            this.groupBoxForm2.ResumeLayout(false);
-            this.groupBoxForm3.ResumeLayout(false);
-            this.groupBoxForm1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ros_stream)).EndInit();
-            this.scalePadding1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.scalePadding2.ResumeLayout(false);
-            this.scalePadding3.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.groupBoxForm4.ResumeLayout(false);
+            this.scalePadding3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.groupBoxForm2.ResumeLayout(false);
+            this.groupBoxForm3.ResumeLayout(false);
+            this.scalePadding1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.groupBoxForm1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.playbtn)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ros_stream)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1334,19 +1335,16 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private Controls.RosRemoteConnectBtn rosConn1;
-        private System.Windows.Forms.PictureBox ros_stream;
         private System.Windows.Forms.PictureBox info;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn no;
         private System.Windows.Forms.DataGridViewTextBoxColumn data;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label2;
@@ -1411,5 +1409,7 @@
         private Std.ScalePadding scalePadding2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.PictureBox playbtn;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox ros_stream;
     }
 }
