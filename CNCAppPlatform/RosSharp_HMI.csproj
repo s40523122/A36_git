@@ -224,6 +224,12 @@
     <Compile Include="Forms\SocketTest.Designer.cs">
       <DependentUpon>SocketTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SshPlatform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SshPlatform.Designer.cs">
+      <DependentUpon>SshPlatform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SshTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </Compile>
     <Compile Include="Services\Socket_Tool.cs" />
     <Compile Include="Services\SSh_Tool.cs" />
+    <Compile Include="Std\ScaleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Std\ScalePadding.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -295,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SocketTest.resx">
       <DependentUpon>SocketTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SshPlatform.resx">
+      <DependentUpon>SshPlatform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SshTest.resx">
       <DependentUpon>SshTest.cs</DependentUpon>
