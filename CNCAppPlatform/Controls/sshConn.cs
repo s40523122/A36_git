@@ -30,6 +30,7 @@ namespace RosSharp_HMI.Controls
 
         public sshConn() 
         {
+            InitializeComponent();
             checkBox1.FlatAppearance.MouseDownBackColor = Color.FromArgb(14, 41, 92);
             checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 
@@ -92,7 +93,7 @@ namespace RosSharp_HMI.Controls
             this.checkBox1.Location = new System.Drawing.Point(0, 0);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(150, 60);
+            this.checkBox1.Size = new System.Drawing.Size(262, 60);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -111,6 +112,7 @@ namespace RosSharp_HMI.Controls
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.checkBox1);
             this.Name = "sshConn";
+            this.Size = new System.Drawing.Size(262, 201);
             this.ResumeLayout(false);
 
         }
