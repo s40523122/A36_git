@@ -49,6 +49,18 @@ namespace RosSharp_HMI.Services
             });
         }
 
+        /// <summary>
+        /// 傳送新命令
+        /// </summary>
+        public async void Send_command(string command)
+        {
+            await Task.Run(() => // 使用非同步操作執行命令
+            {
+                writer.WriteLine(command);
+                writer.Flush();     // 發送
+            });
+        }
+
         private string StringToRtf(string line)
         {
             if (Regex.IsMatch(line, @"\x1b\]0;")) return "";     // 略過終端機提示符
@@ -81,7 +93,7 @@ namespace RosSharp_HMI.Services
                 if (client.IsConnected)
                 {
                     //MessageBox.Show("SSH connection established."); // 顯示訊息框
-                    shellStream = client.CreateShellStream("xterm", 80, 24, 800, 600, 1024);
+                    if (shellStream == null) shellStream = client.CreateShellStream("xterm", 80, 24, 800, 600, 1024);
 
                     writer = new StreamWriter(shellStream, System.Text.Encoding.ASCII);
                     reader = new StreamReader(shellStream, System.Text.Encoding.ASCII);

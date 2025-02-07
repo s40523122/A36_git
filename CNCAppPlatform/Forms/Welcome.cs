@@ -27,15 +27,19 @@ namespace RosSharp_HMI.Forms
             local_ip.Text = ConnectionConfiguration.local_ip;
             remote_ip.Text = ConnectionConfiguration.remote_ip;
             socket_port.Text = ConnectionConfiguration.socket_port.ToString();
+            remote_username.Text = ConnectionConfiguration.user_name;
+            remote_pwd.Text = ConnectionConfiguration.pass_word;
         }
 
         private async void connect_btn_Click(object sender, EventArgs e)
         {
             ConnectionConfiguration.local_ip = local_ip.Text;
             ConnectionConfiguration.remote_ip = remote_ip.Text;
+            ConnectionConfiguration.user_name = remote_username.Text;
+            ConnectionConfiguration.pass_word = remote_pwd.Text;
 
             int portInt;
-            if (!int.TryParse(INiReader.ReadINIFile(socket_port.Text, "Control", "socket_port"), out portInt))
+            if (!int.TryParse(socket_port.Text, out portInt))
             {
                 portInt = 0;
             }

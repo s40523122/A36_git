@@ -30,30 +30,20 @@
         {
             this.scalePadding1 = new iCAPS.ScalePadding();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.scalePadding9 = new iCAPS.ScalePadding();
-            this.scalePadding8 = new iCAPS.ScalePadding();
-            this.scalePadding7 = new iCAPS.ScalePadding();
-            this.scalePadding6 = new iCAPS.ScalePadding();
-            this.scalePadding5 = new iCAPS.ScalePadding();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.scalePadding4 = new iCAPS.ScalePadding();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.scalePadding3 = new iCAPS.ScalePadding();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.scalePadding2 = new iCAPS.ScalePadding();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.scaleButton1 = new RosSharp_HMI.Std.ScaleButton();
-            this.scaleButton2 = new RosSharp_HMI.Std.ScaleButton();
-            this.scaleButton3 = new RosSharp_HMI.Std.ScaleButton();
+            this.groupBoxForm1 = new JinToolkit.GroupBoxForm();
+            this.sshControl1 = new RosSharp_HMI.Controls.SshControl();
+            this.groupBoxForm2 = new JinToolkit.GroupBoxForm();
+            this.sshControl3 = new RosSharp_HMI.Controls.SshControl();
+            this.groupBoxForm3 = new JinToolkit.GroupBoxForm();
+            this.sshControl2 = new RosSharp_HMI.Controls.SshControl();
+            this.groupBoxForm4 = new JinToolkit.GroupBoxForm();
+            this.sshControl4 = new RosSharp_HMI.Controls.SshControl();
             this.scalePadding1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.scalePadding8.SuspendLayout();
-            this.scalePadding7.SuspendLayout();
-            this.scalePadding6.SuspendLayout();
-            this.scalePadding5.SuspendLayout();
-            this.scalePadding4.SuspendLayout();
-            this.scalePadding3.SuspendLayout();
-            this.scalePadding2.SuspendLayout();
+            this.groupBoxForm1.SuspendLayout();
+            this.groupBoxForm2.SuspendLayout();
+            this.groupBoxForm3.SuspendLayout();
+            this.groupBoxForm4.SuspendLayout();
             this.SuspendLayout();
             // 
             // scalePadding1
@@ -80,6 +70,15 @@
             this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.scalePadding1.SetColumnRatio = 3F;
             this.scalePadding1.SetRowRatio = 5F;
             this.scalePadding1.Size = new System.Drawing.Size(879, 525);
@@ -87,395 +86,134 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.scalePadding9, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.scalePadding8, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.scalePadding7, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.scalePadding6, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.scalePadding5, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.scalePadding4, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.scalePadding3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.scalePadding2, 1, 0);
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.groupBoxForm1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBoxForm2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.groupBoxForm3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBoxForm4, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 26);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(826, 472);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // scalePadding9
+            // groupBoxForm1
             // 
-            this.scalePadding9.ColumnCount = 3;
-            this.scalePadding9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.scalePadding9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.scalePadding9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.scalePadding9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scalePadding9.Init = true;
-            this.scalePadding9.Location = new System.Drawing.Point(618, 377);
-            this.scalePadding9.Margin = new System.Windows.Forms.Padding(0);
-            this.scalePadding9.Name = "scalePadding9";
-            this.scalePadding9.RowCount = 3;
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding9.SetColumnRatio = 15F;
-            this.scalePadding9.SetRowRatio = 10F;
-            this.scalePadding9.Size = new System.Drawing.Size(208, 95);
-            this.scalePadding9.TabIndex = 16;
+            this.groupBoxForm1.Controls.Add(this.sshControl1);
+            this.groupBoxForm1.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.groupBoxForm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxForm1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBoxForm1.ForeColor = System.Drawing.Color.White;
+            this.groupBoxForm1.Location = new System.Drawing.Point(3, 3);
+            this.groupBoxForm1.Name = "groupBoxForm1";
+            this.groupBoxForm1.Padding = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.groupBoxForm1.Size = new System.Drawing.Size(407, 230);
+            this.groupBoxForm1.TabIndex = 0;
+            this.groupBoxForm1.TabStop = false;
+            this.groupBoxForm1.Text = "roscore";
             // 
-            // scalePadding8
+            // sshControl1
             // 
-            this.scalePadding8.ColumnCount = 3;
-            this.scalePadding8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.scalePadding8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.scalePadding8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.scalePadding8.Controls.Add(this.scaleButton3, 1, 1);
-            this.scalePadding8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scalePadding8.Init = true;
-            this.scalePadding8.Location = new System.Drawing.Point(412, 377);
-            this.scalePadding8.Margin = new System.Windows.Forms.Padding(0);
-            this.scalePadding8.Name = "scalePadding8";
-            this.scalePadding8.RowCount = 3;
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding8.SetColumnRatio = 15F;
-            this.scalePadding8.SetRowRatio = 10F;
-            this.scalePadding8.Size = new System.Drawing.Size(206, 95);
-            this.scalePadding8.TabIndex = 15;
+            this.sshControl1.Command = "roscore";
+            this.sshControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sshControl1.Executed_key = "/rosout";
+            this.sshControl1.Interrupt_key = "done";
+            this.sshControl1.Location = new System.Drawing.Point(3, 26);
+            this.sshControl1.LockCommand = true;
+            this.sshControl1.Margin = new System.Windows.Forms.Padding(5);
+            this.sshControl1.Name = "sshControl1";
+            this.sshControl1.Size = new System.Drawing.Size(401, 201);
+            this.sshControl1.TabIndex = 1;
             // 
-            // scalePadding7
+            // groupBoxForm2
             // 
-            this.scalePadding7.ColumnCount = 3;
-            this.scalePadding7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.scalePadding7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.scalePadding7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.scalePadding7.Controls.Add(this.scaleButton1, 1, 1);
-            this.scalePadding7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scalePadding7.Init = true;
-            this.scalePadding7.Location = new System.Drawing.Point(206, 377);
-            this.scalePadding7.Margin = new System.Windows.Forms.Padding(0);
-            this.scalePadding7.Name = "scalePadding7";
-            this.scalePadding7.RowCount = 3;
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding7.SetColumnRatio = 15F;
-            this.scalePadding7.SetRowRatio = 10F;
-            this.scalePadding7.Size = new System.Drawing.Size(206, 95);
-            this.scalePadding7.TabIndex = 14;
+            this.groupBoxForm2.Controls.Add(this.sshControl3);
+            this.groupBoxForm2.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.groupBoxForm2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxForm2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBoxForm2.ForeColor = System.Drawing.Color.White;
+            this.groupBoxForm2.Location = new System.Drawing.Point(3, 239);
+            this.groupBoxForm2.Name = "groupBoxForm2";
+            this.groupBoxForm2.Padding = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.groupBoxForm2.Size = new System.Drawing.Size(407, 230);
+            this.groupBoxForm2.TabIndex = 0;
+            this.groupBoxForm2.TabStop = false;
+            this.groupBoxForm2.Text = "shutdown";
             // 
-            // scalePadding6
+            // sshControl3
             // 
-            this.scalePadding6.ColumnCount = 3;
-            this.scalePadding6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.scalePadding6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.scalePadding6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.scalePadding6.Controls.Add(this.scaleButton2, 1, 1);
-            this.scalePadding6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scalePadding6.Init = true;
-            this.scalePadding6.Location = new System.Drawing.Point(0, 377);
-            this.scalePadding6.Margin = new System.Windows.Forms.Padding(0);
-            this.scalePadding6.Name = "scalePadding6";
-            this.scalePadding6.RowCount = 3;
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding6.SetColumnRatio = 15F;
-            this.scalePadding6.SetRowRatio = 10F;
-            this.scalePadding6.Size = new System.Drawing.Size(206, 95);
-            this.scalePadding6.TabIndex = 13;
+            this.sshControl3.Command = "sudo shutdown now";
+            this.sshControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sshControl3.Executed_key = "/rosout";
+            this.sshControl3.Interrupt_key = "done";
+            this.sshControl3.Location = new System.Drawing.Point(3, 26);
+            this.sshControl3.LockCommand = true;
+            this.sshControl3.Margin = new System.Windows.Forms.Padding(5);
+            this.sshControl3.Name = "sshControl3";
+            this.sshControl3.Size = new System.Drawing.Size(401, 201);
+            this.sshControl3.TabIndex = 1;
             // 
-            // scalePadding5
+            // groupBoxForm3
             // 
-            this.scalePadding5.ColumnCount = 3;
-            this.scalePadding5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.scalePadding5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94F));
-            this.scalePadding5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.scalePadding5.Controls.Add(this.richTextBox4, 1, 1);
-            this.scalePadding5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scalePadding5.Init = true;
-            this.scalePadding5.Location = new System.Drawing.Point(618, 0);
-            this.scalePadding5.Margin = new System.Windows.Forms.Padding(0);
-            this.scalePadding5.Name = "scalePadding5";
-            this.scalePadding5.RowCount = 3;
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding5.SetColumnRatio = 3F;
-            this.scalePadding5.SetRowRatio = 2F;
-            this.scalePadding5.Size = new System.Drawing.Size(208, 377);
-            this.scalePadding5.TabIndex = 12;
+            this.groupBoxForm3.Controls.Add(this.sshControl2);
+            this.groupBoxForm3.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.groupBoxForm3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxForm3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBoxForm3.ForeColor = System.Drawing.Color.White;
+            this.groupBoxForm3.Location = new System.Drawing.Point(416, 3);
+            this.groupBoxForm3.Name = "groupBoxForm3";
+            this.groupBoxForm3.Padding = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.groupBoxForm3.Size = new System.Drawing.Size(407, 230);
+            this.groupBoxForm3.TabIndex = 0;
+            this.groupBoxForm3.TabStop = false;
+            this.groupBoxForm3.Text = "main";
             // 
-            // richTextBox4
+            // sshControl2
             // 
-            this.richTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox4.ForeColor = System.Drawing.Color.White;
-            this.richTextBox4.Location = new System.Drawing.Point(6, 7);
-            this.richTextBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.ReadOnly = true;
-            this.richTextBox4.Size = new System.Drawing.Size(195, 361);
-            this.richTextBox4.TabIndex = 8;
-            this.richTextBox4.Text = "";
+            this.sshControl2.Command = "vision_main";
+            this.sshControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sshControl2.Executed_key = "/rosout";
+            this.sshControl2.Interrupt_key = "done";
+            this.sshControl2.Location = new System.Drawing.Point(3, 26);
+            this.sshControl2.LockCommand = true;
+            this.sshControl2.Margin = new System.Windows.Forms.Padding(5);
+            this.sshControl2.Name = "sshControl2";
+            this.sshControl2.Size = new System.Drawing.Size(401, 201);
+            this.sshControl2.TabIndex = 1;
             // 
-            // scalePadding4
+            // groupBoxForm4
             // 
-            this.scalePadding4.ColumnCount = 3;
-            this.scalePadding4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.scalePadding4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94F));
-            this.scalePadding4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.scalePadding4.Controls.Add(this.richTextBox3, 1, 1);
-            this.scalePadding4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scalePadding4.Init = true;
-            this.scalePadding4.Location = new System.Drawing.Point(412, 0);
-            this.scalePadding4.Margin = new System.Windows.Forms.Padding(0);
-            this.scalePadding4.Name = "scalePadding4";
-            this.scalePadding4.RowCount = 3;
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding4.SetColumnRatio = 3F;
-            this.scalePadding4.SetRowRatio = 2F;
-            this.scalePadding4.Size = new System.Drawing.Size(206, 377);
-            this.scalePadding4.TabIndex = 11;
+            this.groupBoxForm4.Controls.Add(this.sshControl4);
+            this.groupBoxForm4.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.groupBoxForm4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxForm4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBoxForm4.ForeColor = System.Drawing.Color.White;
+            this.groupBoxForm4.Location = new System.Drawing.Point(416, 239);
+            this.groupBoxForm4.Name = "groupBoxForm4";
+            this.groupBoxForm4.Padding = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.groupBoxForm4.Size = new System.Drawing.Size(407, 230);
+            this.groupBoxForm4.TabIndex = 0;
+            this.groupBoxForm4.TabStop = false;
+            this.groupBoxForm4.Text = "custom";
             // 
-            // richTextBox3
+            // sshControl4
             // 
-            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox3.ForeColor = System.Drawing.Color.White;
-            this.richTextBox3.Location = new System.Drawing.Point(6, 7);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.Size = new System.Drawing.Size(193, 361);
-            this.richTextBox3.TabIndex = 8;
-            this.richTextBox3.Text = "";
-            // 
-            // scalePadding3
-            // 
-            this.scalePadding3.ColumnCount = 3;
-            this.scalePadding3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.scalePadding3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94F));
-            this.scalePadding3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.scalePadding3.Controls.Add(this.richTextBox2, 1, 1);
-            this.scalePadding3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scalePadding3.Init = true;
-            this.scalePadding3.Location = new System.Drawing.Point(0, 0);
-            this.scalePadding3.Margin = new System.Windows.Forms.Padding(0);
-            this.scalePadding3.Name = "scalePadding3";
-            this.scalePadding3.RowCount = 3;
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding3.SetColumnRatio = 3F;
-            this.scalePadding3.SetRowRatio = 2F;
-            this.scalePadding3.Size = new System.Drawing.Size(206, 377);
-            this.scalePadding3.TabIndex = 10;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.ForeColor = System.Drawing.Color.White;
-            this.richTextBox2.Location = new System.Drawing.Point(6, 7);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(193, 361);
-            this.richTextBox2.TabIndex = 8;
-            this.richTextBox2.Text = "";
-            // 
-            // scalePadding2
-            // 
-            this.scalePadding2.ColumnCount = 3;
-            this.scalePadding2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.scalePadding2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94F));
-            this.scalePadding2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.scalePadding2.Controls.Add(this.richTextBox1, 1, 1);
-            this.scalePadding2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scalePadding2.Init = true;
-            this.scalePadding2.Location = new System.Drawing.Point(206, 0);
-            this.scalePadding2.Margin = new System.Windows.Forms.Padding(0);
-            this.scalePadding2.Name = "scalePadding2";
-            this.scalePadding2.RowCount = 3;
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
-            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.scalePadding2.SetColumnRatio = 3F;
-            this.scalePadding2.SetRowRatio = 2F;
-            this.scalePadding2.Size = new System.Drawing.Size(206, 377);
-            this.scalePadding2.TabIndex = 9;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(53)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(6, 7);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(193, 361);
-            this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "";
-            // 
-            // scaleButton1
-            // 
-            this.scaleButton1.BackColor = System.Drawing.Color.Black;
-            this.scaleButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scaleButton1.Factor = 0.2F;
-            this.scaleButton1.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Bold);
-            this.scaleButton1.ForeColor = System.Drawing.Color.White;
-            this.scaleButton1.Location = new System.Drawing.Point(33, 12);
-            this.scaleButton1.Name = "scaleButton1";
-            this.scaleButton1.Size = new System.Drawing.Size(138, 70);
-            this.scaleButton1.TabIndex = 0;
-            this.scaleButton1.Text = "main";
-            this.scaleButton1.UseVisualStyleBackColor = false;
-            // 
-            // scaleButton2
-            // 
-            this.scaleButton2.BackColor = System.Drawing.Color.Black;
-            this.scaleButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scaleButton2.Factor = 0.2F;
-            this.scaleButton2.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Bold);
-            this.scaleButton2.ForeColor = System.Drawing.Color.White;
-            this.scaleButton2.Location = new System.Drawing.Point(33, 12);
-            this.scaleButton2.Name = "scaleButton2";
-            this.scaleButton2.Size = new System.Drawing.Size(138, 70);
-            this.scaleButton2.TabIndex = 0;
-            this.scaleButton2.Text = "roscore";
-            this.scaleButton2.UseVisualStyleBackColor = false;
-            // 
-            // scaleButton3
-            // 
-            this.scaleButton3.BackColor = System.Drawing.Color.Black;
-            this.scaleButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scaleButton3.Factor = 0.2F;
-            this.scaleButton3.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Bold);
-            this.scaleButton3.ForeColor = System.Drawing.Color.White;
-            this.scaleButton3.Location = new System.Drawing.Point(33, 12);
-            this.scaleButton3.Name = "scaleButton3";
-            this.scaleButton3.Size = new System.Drawing.Size(138, 70);
-            this.scaleButton3.TabIndex = 0;
-            this.scaleButton3.Text = "shutdown";
-            this.scaleButton3.UseVisualStyleBackColor = false;
+            this.sshControl4.Command = "command";
+            this.sshControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sshControl4.Executed_key = "/rosout";
+            this.sshControl4.Interrupt_key = "done";
+            this.sshControl4.Location = new System.Drawing.Point(3, 26);
+            this.sshControl4.LockCommand = false;
+            this.sshControl4.Margin = new System.Windows.Forms.Padding(5);
+            this.sshControl4.Name = "sshControl4";
+            this.sshControl4.Size = new System.Drawing.Size(401, 201);
+            this.sshControl4.TabIndex = 1;
             // 
             // SshPlatform
             // 
@@ -488,13 +226,10 @@
             this.Text = "遠端指令執行";
             this.scalePadding1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.scalePadding8.ResumeLayout(false);
-            this.scalePadding7.ResumeLayout(false);
-            this.scalePadding6.ResumeLayout(false);
-            this.scalePadding5.ResumeLayout(false);
-            this.scalePadding4.ResumeLayout(false);
-            this.scalePadding3.ResumeLayout(false);
-            this.scalePadding2.ResumeLayout(false);
+            this.groupBoxForm1.ResumeLayout(false);
+            this.groupBoxForm2.ResumeLayout(false);
+            this.groupBoxForm3.ResumeLayout(false);
+            this.groupBoxForm4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -503,20 +238,13 @@
 
         private iCAPS.ScalePadding scalePadding1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private iCAPS.ScalePadding scalePadding6;
-        private iCAPS.ScalePadding scalePadding5;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private iCAPS.ScalePadding scalePadding4;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private iCAPS.ScalePadding scalePadding3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private iCAPS.ScalePadding scalePadding2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private iCAPS.ScalePadding scalePadding9;
-        private iCAPS.ScalePadding scalePadding8;
-        private iCAPS.ScalePadding scalePadding7;
-        private Std.ScaleButton scaleButton3;
-        private Std.ScaleButton scaleButton1;
-        private Std.ScaleButton scaleButton2;
+        private JinToolkit.GroupBoxForm groupBoxForm1;
+        private JinToolkit.GroupBoxForm groupBoxForm2;
+        private JinToolkit.GroupBoxForm groupBoxForm3;
+        private JinToolkit.GroupBoxForm groupBoxForm4;
+        private Controls.SshControl sshControl1;
+        private Controls.SshControl sshControl3;
+        private Controls.SshControl sshControl2;
+        private Controls.SshControl sshControl4;
     }
 }

@@ -11,16 +11,16 @@ namespace RosSharp_HMI
     internal class ConnectionConfiguration
     {
         static string layout_path = Path.Combine(iCAPS.Env.debug_path, "config/layout.ini");
-        static public string local_ip 
-        { 
+        static public string local_ip
+        {
             get
             {
                 return INiReader.ReadINIFile(layout_path, "Control", "local_ip");
             }
-            set 
+            set
             {
                 INiReader.WriteINIFile(layout_path, "Control", "local_ip", value);
-            } 
+            }
         }
         static public string remote_ip
         {
@@ -53,8 +53,27 @@ namespace RosSharp_HMI
             }
         }
 
-        static public string user_name { get; set; }
-        static public string pass_word { get; set; }
-
+        static public string user_name
+        {
+            get
+            {
+                return INiReader.ReadINIFile(layout_path, "Control", "user_name");
+            }
+            set
+            {
+                INiReader.WriteINIFile(layout_path, "Control", "user_name", value);
+            }
+        }
+        static public string pass_word
+        {
+            get
+            {
+                return INiReader.ReadINIFile(layout_path, "Control", "pass_word");
+            }
+            set
+            {
+                INiReader.WriteINIFile(layout_path, "Control", "pass_word", value);
+            }
+        }
     }
 }

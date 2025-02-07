@@ -200,6 +200,12 @@
     <Compile Include="Controls\sshConn.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\SshControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SshControl.Designer.cs">
+      <DependentUpon>SshControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Hand_eye.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\sshConn.resx">
       <DependentUpon>sshConn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SshControl.resx">
+      <DependentUpon>SshControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Hand_eye.resx">
       <DependentUpon>Hand_eye.cs</DependentUpon>
