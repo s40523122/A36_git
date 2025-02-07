@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RosSharp_HMI.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,13 @@ namespace RosSharp_HMI
         public Form1()
         {
             InitializeComponent();
+            FormClosed += Form1_FormClosed;
         }
 
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            RosSharp_Tool.Close_ROS();
+        }
     }
 
 }
