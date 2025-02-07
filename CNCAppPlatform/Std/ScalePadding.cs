@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RosSharp_HMI.Std
+namespace iCAPS
 {
     internal class ScalePadding : TableLayoutPanel
     {

@@ -86,7 +86,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.groupBoxForm5 = new JinToolkit.GroupBoxForm();
-            this.scalePadding2 = new RosSharp_HMI.Std.ScalePadding();
+            this.scalePadding2 = new iCAPS.ScalePadding();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -95,7 +95,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBoxForm4 = new JinToolkit.GroupBoxForm();
-            this.scalePadding3 = new RosSharp_HMI.Std.ScalePadding();
+            this.scalePadding3 = new iCAPS.ScalePadding();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_get_fusion = new System.Windows.Forms.Button();
             this.btn_set_0 = new System.Windows.Forms.Button();
@@ -108,14 +108,14 @@
             this.groupBoxForm2 = new JinToolkit.GroupBoxForm();
             this.socket_response = new System.Windows.Forms.RichTextBox();
             this.groupBoxForm3 = new JinToolkit.GroupBoxForm();
-            this.scalePadding1 = new RosSharp_HMI.Std.ScalePadding();
+            this.scalePadding1 = new iCAPS.ScalePadding();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pose_index = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBoxForm1 = new JinToolkit.GroupBoxForm();
-            this.playbtn = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.playbtn = new System.Windows.Forms.PictureBox();
             this.ros_stream = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.info)).BeginInit();
@@ -136,8 +136,8 @@
             this.scalePadding1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBoxForm1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playbtn)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ros_stream)).BeginInit();
             this.SuspendLayout();
             // 
@@ -797,6 +797,9 @@
             this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.scalePadding2.SetColumnRatio = 5F;
             this.scalePadding2.SetRowRatio = 5F;
             this.scalePadding2.Size = new System.Drawing.Size(262, 262);
@@ -930,6 +933,9 @@
             this.scalePadding3.Location = new System.Drawing.Point(3, 25);
             this.scalePadding3.Name = "scalePadding3";
             this.scalePadding3.RowCount = 3;
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.scalePadding3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
@@ -1157,6 +1163,9 @@
             this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.scalePadding1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.scalePadding1.SetColumnRatio = 5F;
             this.scalePadding1.SetRowRatio = 5F;
             this.scalePadding1.Size = new System.Drawing.Size(233, 143);
@@ -1238,6 +1247,16 @@
             this.groupBoxForm1.TabStop = false;
             this.groupBoxForm1.Text = "畫面監控";
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.playbtn);
+            this.panel5.Controls.Add(this.ros_stream);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(13, 33);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(309, 184);
+            this.panel5.TabIndex = 31;
+            // 
             // playbtn
             // 
             this.playbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1253,16 +1272,6 @@
             this.playbtn.TabStop = false;
             this.playbtn.Click += new System.EventHandler(this.Sub_Video);
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.playbtn);
-            this.panel5.Controls.Add(this.ros_stream);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(13, 33);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(309, 184);
-            this.panel5.TabIndex = 31;
-            // 
             // ros_stream
             // 
             this.ros_stream.BackColor = System.Drawing.Color.Black;
@@ -1275,6 +1284,7 @@
             this.ros_stream.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ros_stream.TabIndex = 13;
             this.ros_stream.TabStop = false;
+            this.ros_stream.Click += new System.EventHandler(this.Sub_Video);
             // 
             // ControlFrame
             // 
@@ -1321,8 +1331,8 @@
             this.scalePadding1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBoxForm1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.playbtn)).EndInit();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.playbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ros_stream)).EndInit();
             this.ResumeLayout(false);
 
@@ -1402,11 +1412,11 @@
         private JinToolkit.GroupBoxForm groupBoxForm3;
         private JinToolkit.GroupBoxForm groupBoxForm4;
         private JinToolkit.GroupBoxForm groupBoxForm5;
-        private Std.ScalePadding scalePadding1;
+        private iCAPS.ScalePadding scalePadding1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Std.ScalePadding scalePadding3;
+        private iCAPS.ScalePadding scalePadding3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private Std.ScalePadding scalePadding2;
+        private iCAPS.ScalePadding scalePadding2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.PictureBox playbtn;
         private System.Windows.Forms.Panel panel5;
